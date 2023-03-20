@@ -1,0 +1,79 @@
+:host {
+  display: block;
+  padding: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.sidebar-label {
+  font-size: 1em;
+  margin: 2px;
+  padding: 2px;
+}
+
+.sidebar-type {
+  font-size: 0.75em;
+  line-height: 1em;
+  color: #212121;
+  border: 1px solid #898989;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 2px;
+}
+
+.sidebar-item-child {
+  padding-left: 20px;
+}
+
+.selected {
+  background-color: #ccc !important;
+}
+
+.sidebar-item-header {
+  vertical-align: middle;
+  line-height: 1.7rem;
+  height: 1.7rem;
+  cursor: pointer;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.sidebar-item-header:hover {
+  background-color: #dbdbdb;
+}
+
+.sidebar-propertyname {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.sidebar-properties {
+  padding-left: 10px;
+}
+
+.sidebar-expand-button {
+  vertical-align: bottom;
+  background: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.sidebar-expand-button svg {
+  width: 20px;
+  height: 20px;
+  fill: #777;
+}
+
+.sidebar-expand-button:hover svg {
+  fill: #000;
+}
+
+.sidebar-expand-button:active svg {
+  fill: #555;
+}

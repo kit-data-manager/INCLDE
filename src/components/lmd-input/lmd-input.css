@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+button.edit-button {
+  display: inline-block;
+  vertical-align: center;
+  background: none;
+  border: none;
+  padding: 0px;
+  padding-left: 5px;
+  margin: 0px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+button.edit-button svg {
+  width: 15px;
+  height: 15px;
+  fill: #777;
+}
+
+button.edit-button:hover svg {
+  fill: #000;
+}
+
+button.edit-button:active svg {
+  fill: #555;
+}
+

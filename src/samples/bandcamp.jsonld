@@ -1,0 +1,1642 @@
+{
+  "albumReleaseType": "AlbumRelease",
+  "@id": "https://adhesivewombat.bandcamp.com/album/marsupial-madness",
+  "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/album/marsupial-madness",
+  "@type": "MusicAlbum",
+  "name": "Marsupial Madness",
+  "dateModified": "10 Jun 2014 18:31:17 GMT",
+  "albumRelease": [
+    {
+      "@type": [
+        "MusicRelease",
+        "Product"
+      ],
+      "@id": "https://adhesivewombat.bandcamp.com/album/marsupial-madness",
+      "name": "Marsupial Madness",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "item_id",
+          "value": 233409634
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "item_type",
+          "value": "a"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "selling_band_id",
+          "value": 1018375108
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "type_name",
+          "value": "Digital"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "art_id",
+          "value": 3275083902
+        }
+      ],
+      "description": "Includes high-quality download in MP3, FLAC and more. Paying supporters also get unlimited streaming via the free Bandcamp app.",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://adhesivewombat.bandcamp.com/album/marsupial-madness#a233409634-buy",
+        "priceCurrency": "USD",
+        "price": 7.0,
+        "priceSpecification": {
+          "minPrice": 7.0
+        },
+        "availability": "OnlineOnly"
+      },
+      "musicReleaseFormat": "DigitalFormat",
+      "image": [
+        "https://f4.bcbits.com/img/a3275083902_10.jpg"
+      ]
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/8-bit-adventure"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/anthem"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/night-shade"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/pan-galactic-gargle-blasters"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/bombs"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/funky-sundays"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/feel-the-jank-extended"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/chodge-darger"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/pancakes"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/ball-point"
+    },
+    {
+      "@type": "MusicRelease",
+      "@id": "https://adhesivewombat.bandcamp.com/track/haters-gonna-hate"
+    }
+  ],
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "Adhesive Wombat"
+  },
+  "publisher": {
+    "@type": "MusicGroup",
+    "@id": "https://adhesivewombat.bandcamp.com",
+    "name": "AdhesiveWombat",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "band_id",
+        "value": 1018375108
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "has_any_downloads",
+        "value": true
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "has_download_codes",
+        "value": true
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "image_height",
+        "value": 500
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "image_id",
+        "value": 7374914
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "image_width",
+        "value": 500
+      }
+    ],
+    "image": "https://f4.bcbits.com/img/0007374914_10.jpg",
+    "genre": "https://bandcamp.com/tag/electronic",
+    "subjectOf": [
+      {
+        "@type": "WebPage",
+        "url": "https://adhesivewombat.bandcamp.com/music",
+        "name": "music",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "nav_type",
+            "value": "m"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "url": "https://adhesivewombat.bandcamp.com/community",
+        "name": "community",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "nav_type",
+            "value": "c"
+          }
+        ]
+      }
+    ],
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Raleigh, North Carolina"
+    }
+  },
+  "numTracks": 11,
+  "track": {
+    "@type": "ItemList",
+    "numberOfItems": 11,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/8-bit-adventure",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 4155239919
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "8 Bit Adventure",
+          "duration": "P00H04M31S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/8-bit-adventure"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/anthem",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 1379510019
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Anthem",
+          "duration": "P00H03M34S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/anthem"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/night-shade",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 812006117
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Night Shade",
+          "duration": "P00H06M50S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/night-shade"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/pan-galactic-gargle-blasters",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 62306890
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Pan Galactic Gargle Blasters",
+          "duration": "P00H02M57S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/pan-galactic-gargle-blasters"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/bombs",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 1921097973
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Bombs",
+          "duration": "P00H04M29S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/bombs"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/funky-sundays",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 1147977652
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Funky Sundays",
+          "duration": "P00H02M57S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/funky-sundays"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/feel-the-jank-extended",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 2113053502
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Feel the Jank (extended)",
+          "duration": "P00H03M16S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/feel-the-jank-extended"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/chodge-darger",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 1088165944
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Chodge Darger",
+          "duration": "P00H02M13S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/chodge-darger"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/pancakes",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 722579958
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Pancakes",
+          "duration": "P00H06M05S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/pancakes"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/ball-point",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 1487359579
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Ball Point",
+          "duration": "P00H03M24S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/ball-point"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "MusicRecording",
+          "@id": "https://adhesivewombat.bandcamp.com/track/haters-gonna-hate",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "track_id",
+              "value": 1821375784
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "license_name",
+              "value": "all_rights_reserved"
+            }
+          ],
+          "name": "Haters Gonna Hate",
+          "duration": "P00H03M21S",
+          "copyrightNotice": "All Rights Reserved",
+          "mainEntityOfPage": "https://adhesivewombat.bandcamp.com/track/haters-gonna-hate"
+        }
+      }
+    ]
+  },
+  "image": "https://f4.bcbits.com/img/a3275083902_10.jpg",
+  "keywords": [
+    "Electronic",
+    "adhesivewombat",
+    "chip",
+    "chiptune",
+    "electro",
+    "electro house",
+    "funk",
+    "Raleigh"
+  ],
+  "datePublished": "05 Jun 2013 00:00:00 GMT",
+  "description": "First album! You guys asked for it so here it is :) A collection of works from my first year as a producer. Enjoy.",
+  "copyrightNotice": "All Rights Reserved",
+  "comment": [
+    {
+      "@type": "Comment",
+      "author": {
+        "@type": "Person",
+        "url": "https://bandcamp.com/epicwolverine",
+        "image": "https://f4.bcbits.com/img/0005968670_50.jpg",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "image_id",
+            "value": 5968670
+          }
+        ],
+        "name": "EpicWolverine"
+      },
+      "text": [
+        "The name is nonsense but the song is a banger.",
+        "Favorite track: Pancakes"
+      ]
+    },
+    {
+      "@type": "Comment",
+      "author": {
+        "@type": "Person",
+        "url": "https://bandcamp.com/cook_it",
+        "image": "https://f4.bcbits.com/img/0028867309_50.jpg",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "image_id",
+            "value": 28867309
+          }
+        ],
+        "name": "Cook I.T!"
+      },
+      "text": [
+        "If songs could transform your soul into molten butter, this album definitly does that ",
+        "Favorite track: Funky Sundays"
+      ]
+    },
+    {
+      "@type": "Comment",
+      "author": {
+        "@type": "Person",
+        "url": "https://bandcamp.com/spartacusbro",
+        "image": "https://f4.bcbits.com/img/0018758721_50.jpg",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "image_id",
+            "value": 18758721
+          }
+        ],
+        "name": "spartacusbro"
+      },
+      "text": [
+        "It's one of those moments when you just happen across that awesome song while playing really well in a game and that moment becomes burned into your memory. Yeah, that happens with this entire album.",
+        "Favorite track: Chodge Darger"
+      ]
+    },
+    {
+      "@type": "Comment",
+      "author": {
+        "@type": "Person",
+        "url": "https://bandcamp.com/goodforthehealthbadforeducation",
+        "image": "https://f4.bcbits.com/img/0010067653_50.jpg",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "image_id",
+            "value": 10067653
+          }
+        ],
+        "name": "Marc"
+      },
+      "text": [
+        "The energy that emanate from those tracks !",
+        "Favorite track: 8 Bit Adventure"
+      ]
+    },
+    {
+      "@type": "Comment",
+      "author": {
+        "@type": "Person",
+        "url": "https://bandcamp.com/samgd14",
+        "image": "https://f4.bcbits.com/img/0013484983_50.jpg",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "image_id",
+            "value": 13484983
+          }
+        ],
+        "name": "Sami Ghoul-Duclos"
+      },
+      "text": [
+        "The marsupials are assuredly my favourite animals!",
+        "Favorite track: 8 Bit Adventure"
+      ]
+    },
+    {
+      "@type": "Comment",
+      "author": {
+        "@type": "Person",
+        "url": "https://bandcamp.com/yoghurtmelk",
+        "image": "https://f4.bcbits.com/img/0008495056_50.jpg",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "image_id",
+            "value": 8495056
+          }
+        ],
+        "name": "yoghurtmelk"
+      },
+      "text": [
+        "its a dank song for this dank world. (i also love how this song is in Robot Roller Derby Disco Dodgebal!!)",
+        "Favorite track: 8 Bit Adventure"
+      ]
+    }
+  ],
+  "sponsor": [
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/squishy_derg",
+      "image": "https://f4.bcbits.com/img/0024973135_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 24973135
+        }
+      ],
+      "name": "pontmakesthings"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/mrmagoffin",
+      "image": "https://f4.bcbits.com/img/0005846234_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 5846234
+        }
+      ],
+      "name": "Sean-Patrick Magoffin"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/callumhackett",
+      "image": "https://f4.bcbits.com/img/0030316454_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 30316454
+        }
+      ],
+      "name": "Callum Hackett"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/bluk109",
+      "image": "https://f4.bcbits.com/img/0026572903_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 26572903
+        }
+      ],
+      "name": "Chalumeau"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/peter_papaya",
+      "image": "https://f4.bcbits.com/img/0027142957_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 27142957
+        }
+      ],
+      "name": "Peter Papaya"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/billzo",
+      "image": "https://f4.bcbits.com/img/0001496992_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 1496992
+        }
+      ],
+      "name": "billzo"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/solaris_jt",
+      "image": "https://f4.bcbits.com/img/0024188755_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 24188755
+        }
+      ],
+      "name": "solaris_jt"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/solarkraft",
+      "image": "https://f4.bcbits.com/img/0024956213_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 24956213
+        }
+      ],
+      "name": "paul"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/tomatzo",
+      "image": "https://f4.bcbits.com/img/0027830395_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 27830395
+        }
+      ],
+      "name": "tomatzo"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/nbt_",
+      "image": "https://f4.bcbits.com/img/0019486360_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 19486360
+        }
+      ],
+      "name": "nbt_"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/eshbyesh",
+      "image": "https://f4.bcbits.com/img/0029075434_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 29075434
+        }
+      ],
+      "name": "eshbyesh"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/cache_2",
+      "image": "https://f4.bcbits.com/img/0028402732_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 28402732
+        }
+      ],
+      "name": "cache_2"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/ashweston",
+      "image": "https://f4.bcbits.com/img/0028907449_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 28907449
+        }
+      ],
+      "name": "ashweston"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/Barl0we",
+      "image": "https://f4.bcbits.com/img/0008616917_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 8616917
+        }
+      ],
+      "name": "Barl0we"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/zenxero",
+      "image": "https://f4.bcbits.com/img/0018560462_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 18560462
+        }
+      ],
+      "name": "zenxero"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/thecatman2000",
+      "image": "https://f4.bcbits.com/img/0023394897_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 23394897
+        }
+      ],
+      "name": "Nik"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/kamirion",
+      "image": "https://f4.bcbits.com/img/0005145279_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 5145279
+        }
+      ],
+      "name": "Kamirion"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/stephenhartman",
+      "image": "https://f4.bcbits.com/img/0015432677_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 15432677
+        }
+      ],
+      "name": "Stephen Hartman"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/zacravity",
+      "image": "https://f4.bcbits.com/img/0016730404_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 16730404
+        }
+      ],
+      "name": "Zacravity"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/khanfluence",
+      "image": "https://f4.bcbits.com/img/0012160860_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 12160860
+        }
+      ],
+      "name": "khanfluence"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/dukeofleet",
+      "image": "https://f4.bcbits.com/img/0028299244_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 28299244
+        }
+      ],
+      "name": "dukeofleet"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/naxdar",
+      "image": "https://f4.bcbits.com/img/0028786347_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 28786347
+        }
+      ],
+      "name": "Naxdar"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/yinnuki",
+      "image": "https://f4.bcbits.com/img/0024613283_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 24613283
+        }
+      ],
+      "name": "Yinnuki"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/tubamabob",
+      "image": "https://f4.bcbits.com/img/0011313474_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 11313474
+        }
+      ],
+      "name": "Tubamabob"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/huelsmaniac",
+      "image": "https://f4.bcbits.com/img/0025500173_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 25500173
+        }
+      ],
+      "name": "Huelsmaniac"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/unerog",
+      "image": "https://f4.bcbits.com/img/0021024811_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 21024811
+        }
+      ],
+      "name": "Daudæn"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/thejollyduck",
+      "image": "https://f4.bcbits.com/img/0026363162_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 26363162
+        }
+      ],
+      "name": "thejollyduck"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/197ShinyUmbreon",
+      "image": "https://f4.bcbits.com/img/0012469491_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 12469491
+        }
+      ],
+      "name": "Eclipse™"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/azarciel",
+      "image": "https://f4.bcbits.com/img/0031517171_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 31517171
+        }
+      ],
+      "name": "Azarciel"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/haywirefoxxo",
+      "image": "https://f4.bcbits.com/img/0025714767_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 25714767
+        }
+      ],
+      "name": "HaywireFoxxo"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/execute_ranran",
+      "image": "https://f4.bcbits.com/img/0023988199_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 23988199
+        }
+      ],
+      "name": "execute_retropc_ranran"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/stewfor2dollars",
+      "image": "https://f4.bcbits.com/img/0026842209_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 26842209
+        }
+      ],
+      "name": "stewfor2dollars"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/bitkademan",
+      "image": "https://f4.bcbits.com/img/0024242415_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 24242415
+        }
+      ],
+      "name": "BitkadeJ"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/not_a_username",
+      "image": "https://f4.bcbits.com/img/0029978313_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 29978313
+        }
+      ],
+      "name": "not_a_username"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/sitemoth",
+      "image": "https://f4.bcbits.com/img/0023590584_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 23590584
+        }
+      ],
+      "name": "sitemoth"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/polyomino",
+      "image": "https://f4.bcbits.com/img/0023678151_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 23678151
+        }
+      ],
+      "name": "Jacob Allen"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/flynn_",
+      "image": "https://f4.bcbits.com/img/0028472757_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 28472757
+        }
+      ],
+      "name": "flynn_"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/orangespace",
+      "image": "https://f4.bcbits.com/img/0023324384_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 23324384
+        }
+      ],
+      "name": "Orangespace"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/durnehviir_",
+      "image": "https://f4.bcbits.com/img/0018469018_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 18469018
+        }
+      ],
+      "name": "Durnehviir_"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/zafluffy",
+      "image": "https://f4.bcbits.com/img/0028480619_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 28480619
+        }
+      ],
+      "name": "ZaFluffy"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/kreatiph",
+      "image": "https://f4.bcbits.com/img/0026050333_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 26050333
+        }
+      ],
+      "name": "Kreatiph"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/trigger_segfault",
+      "image": "https://f4.bcbits.com/img/0024381927_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 24381927
+        }
+      ],
+      "name": "trigger_segfault"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/goram",
+      "image": "https://f4.bcbits.com/img/0021080008_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 21080008
+        }
+      ],
+      "name": "gorram"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/lichenrock",
+      "image": "https://f4.bcbits.com/img/0029237301_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 29237301
+        }
+      ],
+      "name": "Lichen"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/Lightless",
+      "image": "https://f4.bcbits.com/img/0011867258_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 11867258
+        }
+      ],
+      "name": "Lightless"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/jonrod",
+      "image": "https://f4.bcbits.com/img/0020134899_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 20134899
+        }
+      ],
+      "name": "Jonrod"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/a_random_slime",
+      "image": "https://f4.bcbits.com/img/0022318322_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 22318322
+        }
+      ],
+      "name": "Vaki"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/nekomajin",
+      "image": "https://f4.bcbits.com/img/0029210516_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 29210516
+        }
+      ],
+      "name": "Nekomajin"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/yonows",
+      "image": "https://f4.bcbits.com/img/0012774111_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 12774111
+        }
+      ],
+      "name": "yonows"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/supergrav",
+      "image": "https://f4.bcbits.com/img/0002545050_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 2545050
+        }
+      ],
+      "name": "Stephen Bloom"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/ndsguy",
+      "image": "https://f4.bcbits.com/img/0025455168_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 25455168
+        }
+      ],
+      "name": "Enthis"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/drdoomsalot",
+      "image": "https://f4.bcbits.com/img/0011152547_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 11152547
+        }
+      ],
+      "name": "drdoomsalot"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/stalray",
+      "image": "https://f4.bcbits.com/img/0009031747_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 9031747
+        }
+      ],
+      "name": "stalray"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/stuffses",
+      "image": "https://f4.bcbits.com/img/0002818449_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 2818449
+        }
+      ],
+      "name": "Sprakle"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/avalanche_",
+      "image": "https://f4.bcbits.com/img/0020219747_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 20219747
+        }
+      ],
+      "name": "Avalanche"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/fmartingr",
+      "image": "https://f4.bcbits.com/img/0017366880_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 17366880
+        }
+      ],
+      "name": "Felipe M."
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/kyrla",
+      "image": "https://f4.bcbits.com/img/0014428324_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 14428324
+        }
+      ],
+      "name": "kyrla"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/kofhwang",
+      "image": "https://f4.bcbits.com/img/0010097339_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 10097339
+        }
+      ],
+      "name": "K Hwang"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/theluigi545",
+      "image": "https://f4.bcbits.com/img/0018683379_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 18683379
+        }
+      ],
+      "name": "TheLuigi545"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/dablob448",
+      "image": "https://f4.bcbits.com/img/0019190121_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 19190121
+        }
+      ],
+      "name": "dablob448"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/larssveen",
+      "image": "https://f4.bcbits.com/img/0023435423_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 23435423
+        }
+      ],
+      "name": "larssveen"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/thisisalan",
+      "image": "https://f4.bcbits.com/img/0017237742_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 17237742
+        }
+      ],
+      "name": "Alan Joyce"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/ag0512555",
+      "image": "https://f4.bcbits.com/img/0009645401_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 9645401
+        }
+      ],
+      "name": "lefteyetears"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/theonlyone1998",
+      "image": "https://f4.bcbits.com/img/0027047570_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 27047570
+        }
+      ],
+      "name": "theonlyone1998"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/vapidpixel",
+      "image": "https://f4.bcbits.com/img/0007220355_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 7220355
+        }
+      ],
+      "name": "Vapid Pixel"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/platypusbacon",
+      "image": "https://f4.bcbits.com/img/0015737144_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 15737144
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/nagasadri",
+      "image": "https://f4.bcbits.com/img/0017278542_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 17278542
+        }
+      ],
+      "name": "nagasadri"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/nils-favorites",
+      "image": "https://f4.bcbits.com/img/0019685256_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 19685256
+        }
+      ],
+      "name": "Nil"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/fpga_garden",
+      "image": "https://f4.bcbits.com/img/0015354896_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 15354896
+        }
+      ],
+      "name": "fpga_garden"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/majhinell",
+      "image": "https://f4.bcbits.com/img/0014625140_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 14625140
+        }
+      ],
+      "name": "Majhinell"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/degringolade",
+      "image": "https://f4.bcbits.com/img/0005759467_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 5759467
+        }
+      ],
+      "name": "Ray Cheney"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/rrix",
+      "image": "https://f4.bcbits.com/img/0014249415_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 14249415
+        }
+      ],
+      "name": "Ryan Rix"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/dsafford29",
+      "image": "https://f4.bcbits.com/img/0029725891_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 29725891
+        }
+      ],
+      "name": "Rev"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/coldturkey691",
+      "image": "https://f4.bcbits.com/img/0016147854_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 16147854
+        }
+      ],
+      "name": "coldturkey691"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/that1aaron",
+      "image": "https://f4.bcbits.com/img/0012664167_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 12664167
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/erricrice",
+      "image": "https://f4.bcbits.com/img/0005583155_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 5583155
+        }
+      ],
+      "name": "Erricrice"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/chipheadi",
+      "image": "https://f4.bcbits.com/img/0030541153_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 30541153
+        }
+      ],
+      "name": "chipheadi"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/manaheart",
+      "image": "https://f4.bcbits.com/img/0020934859_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 20934859
+        }
+      ],
+      "name": "InanMirae"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/pivnik",
+      "image": "https://f4.bcbits.com/img/0016010599_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 16010599
+        }
+      ],
+      "name": "pivnik"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/childe_random",
+      "image": "https://f4.bcbits.com/img/0020043419_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 20043419
+        }
+      ],
+      "name": "childe_random"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "art_id",
+      "value": 3275083902
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "featured_track_num",
+      "value": 1
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "license_name",
+      "value": "all_rights_reserved"
+    }
+  ],
+  "@context": "https://schema.org"
+}

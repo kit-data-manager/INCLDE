@@ -1,0 +1,26 @@
+{
+  "title": "LMD-Editor Test Instance",
+  "hideAttributesByDefault": false,
+  "allowNewAttributes": true,
+  "attributConfig": [
+    {
+      "onType": "http://schema.org/Comment",
+      "attributes": [
+        {
+          "name": "http://schema.org/image",
+          "readOnly": true,
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "onId": "https://adhesivewombat.bandcamp.com/track/funky-sundays",
+      "attributes": [
+        {
+          "name": "http://schema.org/duration",
+          "hidden": true
+        }
+      ]
+    }
+  ]
+}

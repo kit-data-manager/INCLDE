@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.view-link {
+  cursor: pointer;
+  font-style: italic;
+}
+
+.view-link-external {
+  text-decoration: underline;
+  color: blue;
+}
