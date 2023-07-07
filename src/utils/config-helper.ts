@@ -43,7 +43,7 @@ export class ConfigHelper {
     }
     for (let index in this.config["attributConfig"]) {
       let setting = this.config["attributConfig"][index]
-      if (setting["onType"] !== undefined && type.includes(setting["onType"])) {
+      if (setting["onType"] !== undefined && (setting["onType"] === '*' || type.includes(setting["onType"]))) {
         for (let attributeIndex in setting["attributes"]) {
           let attributeSettings = setting["attributes"][attributeIndex];
           if (attributeSettings["name"] === attribute) {

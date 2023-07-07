@@ -15,10 +15,7 @@
     "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "strict": true,
-    "paths": {
-      "rdf-canonize-native": ["./src/rdf-canonize-native-stub/"]
-    }
+    "strict": true
   },
   "include": [
     "src"

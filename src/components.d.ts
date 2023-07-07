@@ -16,6 +16,7 @@ export namespace Components {
     }
     interface LmdInput {
         "data": NodeObject[];
+        "isEditable": boolean;
         "selector": (string|number)[];
     }
     interface LmdSidebar {
@@ -127,6 +128,7 @@ declare namespace LocalJSX {
     }
     interface LmdInput {
         "data"?: NodeObject[];
+        "isEditable"?: boolean;
         "onElementSelected"?: (event: LmdInputCustomEvent<SelectEvent>) => void;
         "selector"?: (string|number)[];
     }

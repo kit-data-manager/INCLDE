@@ -13,6 +13,7 @@ export class LmdInput {
 
   @Prop() data: NodeObject[] = [];
   @Prop() selector: (string|number)[] = [];
+  @Prop() isEditable: boolean = true;
   @Event() elementSelected!: EventEmitter<SelectEvent>;
 
   @State() value: any;
@@ -78,7 +79,7 @@ export class LmdInput {
   }
 
   render() {
-    let custom_render = this.customElement?.render();
+    let custom_render = this.customElement?.render(this.isEditable);
     if (custom_render) {
       return (
         <Host>

@@ -34,18 +34,18 @@ export default class BasicEl implements CustomElement {
     }
   }
 
-  render() {
+  render(editable: boolean = true) {
     if (typeof this.value === 'string') {
       return (
-        <input type="text" value={this.value} onInput={(event) => this.handleChange(event)} />
+        <input type="text" value={this.value} onInput={(event) => this.handleChange(event)} readOnly={!editable} disabled={!editable} />
       )
     } else if (typeof this.value === 'number') {
       return (
-        <input type="number" value={this.value} onInput={(event) => this.handleChange(event)} />
+        <input type="number" value={this.value} onInput={(event) => this.handleChange(event)} readOnly={!editable} disabled={!editable} />
       )
     } else if (typeof this.value === 'boolean') {
       return (
-        <input type="checkbox" checked={this.value} onInput={(event) => this.handleChange(event)} />
+        <input type="checkbox" checked={this.value} onInput={(event) => this.handleChange(event)} readOnly={!editable} disabled={!editable} />
       )
     } else {
       return (

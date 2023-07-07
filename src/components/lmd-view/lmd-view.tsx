@@ -51,7 +51,7 @@ export class LmdView {
                   </div>
                   <div class="array-entry">
                     {value.map((_x: any, index) => {
-                      return(<div class="array-element"><lmd-input data={this.data} selector={[this.selectedIndex!, key, index]}></lmd-input>
+                      return(<div class="array-element"><lmd-input data={this.data} selector={[this.selectedIndex!, key, index]} isEditable={keySetings["editable"]}></lmd-input>
                         <div class="interface-buttons">
                           {index !== 0 && <button onClick={() => this.swapElements([this.selectedIndex!, key], index-1, index)}>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
@@ -73,12 +73,14 @@ export class LmdView {
               )
             } else if (keySetings["visible"] === true) {
               return(<div>{key}:
-              <lmd-input data={this.data} selector={[this.selectedIndex!, key]}></lmd-input>
-              <div class="interface-buttons offset">
-                <button class="danger-btn" onClick={() => this.deleteElement([this.selectedIndex!, key])}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-                </button>
-              </div>
+              <lmd-input data={this.data} selector={[this.selectedIndex!, key]} isEditable={keySetings["editable"]}></lmd-input>
+              {keySetings["editable"] &&
+                <div class="interface-buttons offset">
+                  <button class="danger-btn" onClick={() => this.deleteElement([this.selectedIndex!, key])}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                  </button>
+                </div>
+              }
               </div>);
             }
           })}

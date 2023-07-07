@@ -8,7 +8,7 @@ let customElementList: CustomElementClass[] = [ExternalEl, ValueObjectEl, Proper
 // TODO: Time, DateTime, Date, Object Reference, Property Value, https://schema.org/Property ???, http://schema.org/PropertyValue
 
 export interface CustomElement  {
-  render: () => HTMLElement;
+  render: (isEditable?: boolean) => HTMLElement;
   value: any;
 }
 
