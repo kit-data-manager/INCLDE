@@ -2,6 +2,10 @@
   display: block;
 }
 
+.property-name {
+  padding-right: 1em;
+}
+
 button.edit-button {
   display: inline-block;
   vertical-align: center;
