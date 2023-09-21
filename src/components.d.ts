@@ -133,7 +133,8 @@ declare namespace LocalJSX {
     interface LmdEditor {
         "config": object | string;
         "data": object | string;
-        "onEditorClosed"?: (event: LmdEditorCustomEvent<NodeObject[]|undefined>) => void;
+        "onDataUpdated"?: (event: LmdEditorCustomEvent<object | string>) => void;
+        "onEditorClosed"?: (event: LmdEditorCustomEvent<NodeObject|undefined>) => void;
     }
     interface LmdInput {
         "data"?: NodeObject[];

@@ -1,5 +1,5 @@
 import { Component, Prop, State, Host, h, Listen, Event, EventEmitter, forceUpdate } from '@stencil/core';
-import { NodeObject, flatten } from 'jsonld';
+import { NodeObject, flatten, compact } from 'jsonld';
 import { SelectEvent } from '../../utils/events';
 import { SchemaDotOrg } from '../../schema-loader/schema-dot-org';
 import { ConfigHelper } from '../../utils/config-helper';
@@ -15,7 +15,8 @@ export class LmdEditor {
   @Prop() config!: object | string;
   @State() dataObject: NodeObject[] = [];
   @State() selectedIndex?: number;
-  @Event() editorClosed!: EventEmitter<NodeObject[]|undefined>;
+  @Event() editorClosed!: EventEmitter<NodeObject|undefined>;
+  @Event() dataUpdated!: EventEmitter<object | string>;
 
   private configHelper: ConfigHelper = ConfigHelper.getInstance();
 
@@ -57,13 +58,35 @@ export class LmdEditor {
   @Listen('redraw')
   redrawHandler() {
     this.dataObject = [...this.dataObject];
+    compact(
+      this.dataObject,
+      {
+        "@context": "https://schema.org/"
+      }, // ctx
+      {
+        compactArrays: true,
+        compactToRelative: true,
+      }
+    ).then(result => this.dataUpdated.emit(result))
   }
 
   private closeEditor(data: NodeObject[]|undefined){
-    this.editorClosed.emit(data);
-    this.render = () => undefined;
-    this.selectedIndex = undefined;
-    forceUpdate(this);
+    if (data === undefined) {
+      this.editorClosed.emit(data);
+      this.render = () => undefined;
+      this.selectedIndex = undefined;
+      forceUpdate(this);
+    } else {
+      compact(
+        data,
+        {"@context": "https://schema.org/"},
+      ).then(result => {
+        this.editorClosed.emit(result)
+        this.render = () => undefined;
+        this.selectedIndex = undefined;
+        forceUpdate(this);
+      })
+    }
   }
 
   render() {

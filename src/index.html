@@ -18,6 +18,11 @@
 </head>
 
 <body>
+  <div id="editor"></div>
+  <div id="preview">
+    <pre id="output">JSON preview will appear here after changes!</pre>
+  </div>
+  
   <script>
     const config = {
       "title": "LMD-Editor Test Instance",
@@ -53,9 +58,16 @@
         const lmdEditor = document.createElement("lmd-editor");
         lmdEditor.data = data;
         lmdEditor.config = config;
-        document.body.appendChild(lmdEditor);
+        document.getElementById("editor").appendChild(lmdEditor);
+        let result = JSON.stringify(data, null, 2);
+        document.getElementById("output").textContent = result
         lmdEditor.addEventListener('editorClosed', event => {
           console.log('event', event.detail);
+        })
+        lmdEditor.addEventListener('dataUpdated', event => {
+          console.log('event', event.detail);
+          let result = JSON.stringify(event.detail, null, 2);
+          document.getElementById("output").textContent = result
         })
       });
   </script>
