@@ -50,7 +50,7 @@ export class LmdView {
 
             if (Array.isArray(value) && keySettings["visible"] === true) {
               return (
-                <div>
+                <div key={key}>
                   <span class="array-name">{key.replace("http://schema.org/", "")}:</span>
                   {this.renderDeleteButton(key)}
 
@@ -67,7 +67,7 @@ export class LmdView {
               )
 
             } else if (keySettings["visible"] === true) {
-              return (<div>
+              return (<div key={key}>
                 <span class="property-name">{key + ":"}</span>
                 <lmd-input data={this.data} selector={[this.selectedIndex!, key]} isEditable={keySettings["editable"]}></lmd-input>
                 {keySettings["editable"] && this.renderDeleteButton(key)}
