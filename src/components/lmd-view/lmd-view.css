@@ -17,6 +17,10 @@
   border-bottom: dotted 1px #ccc;
 }
 
+.property-name {
+  padding-right: 1em;
+}
+
 lmd-input {
   display: inline-block;
 }

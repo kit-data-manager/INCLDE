@@ -72,8 +72,9 @@ export class LmdView {
                 </div>
               )
             } else if (keySettings["visible"] === true) {
-              return(<div>{key}:
-              <lmd-input data={this.data} selector={[this.selectedIndex!, key]} isEditable={keySettings["editable"]}></lmd-input>
+              return(<div>
+                <span class="property-name">{key + ":"}</span>
+                <lmd-input data={this.data} selector={[this.selectedIndex!, key]} isEditable={keySettings["editable"]}></lmd-input>
               {keySettings["editable"] &&
                 <div class="interface-buttons offset">
                   <button class="danger-btn" onClick={() => this.deleteElement([this.selectedIndex!, key])}>
