@@ -28,8 +28,14 @@ export namespace Components {
         "globalSelector"?: number;
         "selector"?: number;
     }
+    /**
+     * This component represents the properties of a selected entity.
+     */
     interface LmdView {
         "data": NodeObject[];
+        /**
+          * The index of the object to render.
+         */
         "selectedIndex"?: number;
     }
     interface LmdViewEdit {
@@ -92,6 +98,9 @@ declare global {
         prototype: HTMLLmdSidebarElementElement;
         new (): HTMLLmdSidebarElementElement;
     };
+    /**
+     * This component represents the properties of a selected entity.
+     */
     interface HTMLLmdViewElement extends Components.LmdView, HTMLStencilElement {
     }
     var HTMLLmdViewElement: {
@@ -142,9 +151,15 @@ declare namespace LocalJSX {
         "onElementSelected"?: (event: LmdSidebarElementCustomEvent<SelectEvent>) => void;
         "selector"?: number;
     }
+    /**
+     * This component represents the properties of a selected entity.
+     */
     interface LmdView {
         "data": NodeObject[];
         "onRedraw"?: (event: LmdViewCustomEvent<CustomEvent>) => void;
+        /**
+          * The index of the object to render.
+         */
         "selectedIndex"?: number;
     }
     interface LmdViewEdit {
@@ -177,6 +192,9 @@ declare module "@stencil/core" {
             "lmd-input": LocalJSX.LmdInput & JSXBase.HTMLAttributes<HTMLLmdInputElement>;
             "lmd-sidebar": LocalJSX.LmdSidebar & JSXBase.HTMLAttributes<HTMLLmdSidebarElement>;
             "lmd-sidebar-element": LocalJSX.LmdSidebarElement & JSXBase.HTMLAttributes<HTMLLmdSidebarElementElement>;
+            /**
+             * This component represents the properties of a selected entity.
+             */
             "lmd-view": LocalJSX.LmdView & JSXBase.HTMLAttributes<HTMLLmdViewElement>;
             "lmd-view-edit": LocalJSX.LmdViewEdit & JSXBase.HTMLAttributes<HTMLLmdViewEditElement>;
             "lmd-view-link": LocalJSX.LmdViewLink & JSXBase.HTMLAttributes<HTMLLmdViewLinkElement>;
