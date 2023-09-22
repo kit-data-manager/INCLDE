@@ -15,8 +15,8 @@ export class LmdEditor {
   @Prop() config!: object | string;
   @State() dataObject: NodeObject[] = [];
   @State() selectedIndex?: number;
-  @Event() editorClosed!: EventEmitter<NodeObject|undefined>;
-  @Event() dataUpdated!: EventEmitter<object | string>;
+  @Event() editorClosed!: EventEmitter<NodeObject | NodeObject[] | undefined>;
+  @Event() dataUpdated!: EventEmitter<NodeObject | NodeObject[] | string>;
 
   private configHelper: ConfigHelper = ConfigHelper.getInstance();
 
@@ -60,14 +60,13 @@ export class LmdEditor {
     this.dataObject = [...this.dataObject];
     compact(
       this.dataObject,
-      {
-        "@context": "https://schema.org/"
-      }, // ctx
-      {
-        compactArrays: true,
-        compactToRelative: true,
-      }
-    ).then(result => this.dataUpdated.emit(result))
+      {"@context": "http://schema.org/"},
+    )
+    .then(result => this.dataUpdated.emit(result))
+    .catch(errorReason => {
+      console.warn("Unable to compact JSON. Returning flattened JSON-LD. Reason: ", errorReason);
+      this.dataUpdated.emit(this.dataObject);
+    })
   }
 
   private closeEditor(data: NodeObject[]|undefined){
@@ -77,15 +76,26 @@ export class LmdEditor {
       this.selectedIndex = undefined;
       forceUpdate(this);
     } else {
+      let errorHandler: (errorReason: any) => void = errorReason => {
+        console.warn("Unable to compact JSON. Returning flattened JSON-LD. Reason: ", errorReason);
+        this.editorClosed.emit(data);
+        this.render = () => undefined;
+        this.selectedIndex = undefined;
+        forceUpdate(this);
+      };
       compact(
         data,
-        {"@context": "https://schema.org/"},
-      ).then(result => {
+        {"@context": "http://schema.org/"},
+      )
+      .then(result => {
         this.editorClosed.emit(result)
         this.render = () => undefined;
         this.selectedIndex = undefined;
         forceUpdate(this);
-      })
+        },
+        errorHandler
+      )
+      .catch(errorHandler)
     }
   }
 

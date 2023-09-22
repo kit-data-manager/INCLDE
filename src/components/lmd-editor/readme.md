@@ -15,10 +15,10 @@
 
 ## Events
 
-| Event          | Description | Type                                   |
-| -------------- | ----------- | -------------------------------------- |
-| `dataUpdated`  |             | `CustomEvent<object \| string>`        |
-| `editorClosed` |             | `CustomEvent<NodeObject \| undefined>` |
+| Event          | Description | Type                                                   |
+| -------------- | ----------- | ------------------------------------------------------ |
+| `dataUpdated`  |             | `CustomEvent<NodeObject \| NodeObject[] \| string>`    |
+| `editorClosed` |             | `CustomEvent<NodeObject \| NodeObject[] \| undefined>` |
 
 
 ## Dependencies
