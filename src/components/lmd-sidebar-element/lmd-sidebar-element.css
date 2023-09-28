@@ -24,6 +24,10 @@
   display: inline-block;
 }
 
+.sidebar-item {
+  padding-right: 1em;
+}
+
 .sidebar-item-child {
   padding-left: 20px;
 }
