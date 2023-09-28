@@ -120,7 +120,7 @@ export class LmdView {
     return <div class="interface-buttons">
       {/*index !== 0 && <button onClick={() => this.swapElements([this.selectedIndex!, key], index - 1, index)}>{this.renderPutUpIcon()}</button>*/}
       {/*index !== (value.length - 1) && <button onClick={() => this.swapElements([this.selectedIndex!, key], index, index + 1)}>{this.renderPutDownIcon()}</button>*/}
-      {index === (value.length - 1) && <button disabled />}
+      {/*index === (value.length - 1) && <button disabled />*/}
       <button class="danger-btn" onClick={() => this.deleteElement([this.selectedIndex!, key, index])}>{this.renderDeleteIcon()}</button>
     </div>;
   }
