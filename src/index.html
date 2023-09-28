@@ -8,24 +8,46 @@
 
   <script type="module" src="/build/lmd-editor.esm.js"></script>
   <script nomodule src="/build/lmd-editor.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/chota@latest">
   <style>
-    body {
+    .fit-width {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .card {
+      height: 100%;
+    }
+
+    #preview pre {
+      max-height: 90vh;
       margin: 0;
-      padding: 0;
-      font-family: sans-serif;
     }
   </style>
 </head>
 
 <body>
-  <div id="editor"></div>
-  <div id="preview">
-    <pre id="output">JSON preview will appear here after changes!</pre>
+  <div class="container">
+    <h1>INCLDE Demonstrator</h1>
+    <p>
+      INCLDE (spelled as "include") stands for <strong>INC</strong>ludable <strong>L</strong>inked <strong>D</strong>ata <strong>E</strong>ditor.
+      This page demonstrates the integration of the editor into a styled page.
+      Just imagine this is some research environment. It could be a digital lab notebook, a research data repository, or a research data management system.
+      You are at a point where you would like to input some research metadata or data. The following component shall offer an easy environment to do so.
+      This is not an image. You can use the editor right here.
+    </p>
+  </div>
+  <div class="row fit-width">
+    <div id="editor" class="col-8 card"></div>
+    <div id="preview" class="col-4 card">
+      <p>Preview (not part of the component!)</p>
+      <pre id="output">JSON preview will appear here after changes!</pre>
+    </div>
   </div>
   
   <script>
     const config = {
-      "title": "LMD-Editor Test Instance",
+      "title": "INCLDE Demo Instance",
       "hideAttributesByDefault": false,
       "allowNewAttributes": true,
       "attributConfig": [
