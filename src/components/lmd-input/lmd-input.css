@@ -2,8 +2,24 @@
   display: block;
 }
 
+.property-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
 .property-name {
   padding-right: 1em;
+}
+
+.property-value {
+  flex-grow: 1;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 button.edit-button {

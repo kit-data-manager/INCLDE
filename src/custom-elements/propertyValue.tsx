@@ -36,7 +36,7 @@ export default class PropertyValueEl implements CustomElement {
   render() {
     if (this.basicWrapper !== undefined) {
       return (
-        <span class="property-pair">
+        <span class="property-container">
           <span class="property-name">{this.name + ":"}</span>
           <span class="property-value">{this.basicWrapper.render()}</span>
         </span>

@@ -82,7 +82,7 @@ export class LmdInput {
     let custom_render = this.customElement?.render(this.isEditable);
     if (custom_render) {
       return (
-        <Host>
+        <Host class="property-container">
           {custom_render}
           {this.isComplex &&
             <button class="edit-button" onClick={() => this.switchToDetailedView()}>

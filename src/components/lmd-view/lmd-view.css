@@ -15,11 +15,24 @@
   margin: 5px;
   padding-bottom: 5px;
   border-bottom: dotted 1px #ccc;
+  gap: 1em;
+}
+
+
+.property-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .property-name {
   padding-right: 1em;
 }
+
+.property-value {
+  flex-grow: 1;
+}
+
 
 lmd-input {
   display: inline-block;

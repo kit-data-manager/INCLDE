@@ -56,8 +56,8 @@ export class LmdView {
 
                   <div class="array-entry">
                     {value.map((_x: any, index) => (
-                      <div class="array-element">
-                        <lmd-input data={this.data} selector={[this.selectedIndex!, key, index]} isEditable={keySettings["editable"]}></lmd-input>
+                      <div class="array-element property-container">
+                        <lmd-input class="property-value" data={this.data} selector={[this.selectedIndex!, key, index]} isEditable={keySettings["editable"]}></lmd-input>
                         {this.renderThreeInterfaceButtons(index, key, value)}
                       </div>
                     ))}
@@ -67,9 +67,9 @@ export class LmdView {
               )
 
             } else if (keySettings["visible"] === true) {
-              return (<div key={key}>
+              return (<div class="property-container" key={key}>
                 <span class="property-name">{key + ":"}</span>
-                <lmd-input data={this.data} selector={[this.selectedIndex!, key]} isEditable={keySettings["editable"]}></lmd-input>
+                <lmd-input class="property-value" data={this.data} selector={[this.selectedIndex!, key]} isEditable={keySettings["editable"]}></lmd-input>
                 {keySettings["editable"] && this.renderDeleteButton(key)}
               </div>);
             }
