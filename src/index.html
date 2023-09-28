@@ -28,19 +28,58 @@
 
 <body>
   <div class="container">
-    <h1>INCLDE Demonstrator</h1>
+    <h1>INCLDE <em class="text-grey">(/ɪnˈkluːd/)</em> Demonstrator</h1>
     <p>
-      INCLDE (spelled as "include") stands for <strong>INC</strong>ludable <strong>L</strong>inked <strong>D</strong>ata <strong>E</strong>ditor.
+      INCLDE (spelled "/ɪnˈkluːd/", as "include") stands for <strong>INC</strong>ludable <strong>L</strong>inked <strong>D</strong>ata <strong>E</strong>ditor.
       This page demonstrates the integration of the editor into a styled page.
       Just imagine this is some research environment. It could be a digital lab notebook, a research data repository, or a research data management system.
       You are at a point where you would like to input some research metadata or data. The following component shall offer an easy environment to do so.
       This is not an image. You can use the editor right here.
     </p>
+    <div id="slider-form">
+      <input type="range" id="column-slider" min="0" max="6" value="6" step="1" class="hide" />
+      <label for="column-slider">Show JSON-LD preview (not part of the editor)</label>
+      <style>
+        #slider-form {
+          /* hiding slider until the preview event works properly */
+          /*display: flex;*/
+          display: none;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+        #column-slider {
+          width: 20rem;
+          vertical-align: middle;
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+      <script>
+        var columnClass = "col-0";
+        let slider = document.getElementById("column-slider");
+        slider.addEventListener("input", function() {
+          let preview = document.getElementById("preview");
+          let columnWidth = (this.attributes.max.value - this.value);
+          let newColumnClass = "col-" + columnWidth;
+          if (columnWidth === 0) {
+            preview.style.display = "none";
+            preview.classList.remove(columnClass);
+          } else {
+            preview.style.display = "block";
+            preview.classList.remove(columnClass);
+            preview.classList.add(newColumnClass);
+          }
+          columnClass = newColumnClass;
+        });
+      </script>
+    </div>
   </div>
+  <hr />
   <div class="row fit-width">
-    <div id="editor" class="col-8 card"></div>
-    <div id="preview" class="col-4 card">
-      <p>Preview (not part of the component!)</p>
+    <div id="editor" class="col card"></div>
+    <div id="preview" class="card" style="display: none;">
+      <p>Data preview</p>
       <pre id="output">JSON preview will appear here after changes!</pre>
     </div>
   </div>
