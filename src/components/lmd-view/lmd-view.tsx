@@ -52,13 +52,13 @@ export class LmdView {
               return (
                 <div key={key}>
                   <span class="array-name">{key.replace("http://schema.org/", "")}:</span>
-                  {this.renderDeleteButton(key)}
+                  {this.renderPredicateActionButtons(key)}
 
                   <div class="array-entry">
                     {value.map((_x: any, index) => (
                       <div class="array-element property-container">
                         <lmd-input class="property-value" data={this.data} selector={[this.selectedIndex!, key, index]} isEditable={keySettings["editable"]}></lmd-input>
-                        {this.renderThreeInterfaceButtons(index, key, value)}
+                        {this.renderPropertyActionButtons(index, key, value)}
                       </div>
                     ))}
                     <lmd-view-edit data={this.data} selectedIndex={this.selectedIndex!} subElement={key}></lmd-view-edit>
@@ -70,7 +70,7 @@ export class LmdView {
               return (<div class="property-container" key={key}>
                 <span class="property-name">{key + ":"}</span>
                 <lmd-input class="property-value" data={this.data} selector={[this.selectedIndex!, key]} isEditable={keySettings["editable"]}></lmd-input>
-                {keySettings["editable"] && this.renderDeleteButton(key)}
+                {keySettings["editable"] && this.renderPredicateActionButtons(key)}
               </div>);
             }
           })}
@@ -100,7 +100,7 @@ export class LmdView {
    * @param key the key to delete
    * @returns the html
    */
-  private renderDeleteButton(key: string) {
+  private renderPredicateActionButtons(key: string) {
     return <div class="interface-buttons offset">
       <button class="danger-btn" onClick={() => this.deleteElement([this.selectedIndex!, key])}>
         {this.renderDeleteIcon()}
@@ -116,10 +116,10 @@ export class LmdView {
    * @param value the object
    * @returns the html to render
    */
-  private renderThreeInterfaceButtons(index: number, key: string, value: any) {
+  private renderPropertyActionButtons(index: number, key: string, value: any) {
     return <div class="interface-buttons">
-      {index !== 0 && <button onClick={() => this.swapElements([this.selectedIndex!, key], index - 1, index)}>{this.renderPutUpIcon()}</button>}
-      {index !== (value.length - 1) && <button onClick={() => this.swapElements([this.selectedIndex!, key], index, index + 1)}>{this.renderPutDownIcon()}</button>}
+      {/*index !== 0 && <button onClick={() => this.swapElements([this.selectedIndex!, key], index - 1, index)}>{this.renderPutUpIcon()}</button>*/}
+      {/*index !== (value.length - 1) && <button onClick={() => this.swapElements([this.selectedIndex!, key], index, index + 1)}>{this.renderPutDownIcon()}</button>*/}
       {index === (value.length - 1) && <button disabled />}
       <button class="danger-btn" onClick={() => this.deleteElement([this.selectedIndex!, key, index])}>{this.renderDeleteIcon()}</button>
     </div>;
