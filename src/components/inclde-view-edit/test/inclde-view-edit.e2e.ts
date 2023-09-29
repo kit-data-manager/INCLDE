@@ -1,11 +1,11 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('lmd-view-edit', () => {
+describe('inclde-view-edit', () => {
   it('renders', async () => {
     const page = await newE2EPage();
-    await page.setContent('<lmd-view-edit></lmd-view-edit>');
+    await page.setContent('<inclde-view-edit></inclde-view-edit>');
 
-    const element = await page.find('lmd-view-edit');
+    const element = await page.find('inclde-view-edit');
     expect(element).toHaveClass('hydrated');
   });
 });
