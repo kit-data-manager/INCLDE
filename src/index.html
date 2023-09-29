@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
   <title>INCLDE Demo</title>
 
-  <script type="module" src="/build/inclde.esm.js"></script>
-  <script nomodule src="/build/inclde.js"></script>
+  <script type="module" src="build/inclde.esm.js"></script>
+  <script nomodule src="build/inclde.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/chota@latest">
   <style>
     .fit-width {
@@ -112,7 +112,7 @@
       ]
     }
 
-    fetch("/samples/bandcamp.jsonld")
+    fetch("samples/bandcamp.jsonld")
       .then((response) => response.json())
       .then((data) => {
         console.log("Successfully fetched data", data);
