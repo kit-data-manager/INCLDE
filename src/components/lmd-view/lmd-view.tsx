@@ -1,7 +1,7 @@
 import { Component, Prop, Host, h, EventEmitter, Event } from '@stencil/core';
 import { NodeObject } from 'jsonld';
 import { ConfigHelper } from '../../utils/config-helper';
-import { pathTraversal, pathTraversalSet } from '../../utils/utils';
+import { pathTraversalSet } from '../../utils/utils';
 
 /**
  * This component represents the properties of a selected entity.
@@ -29,14 +29,6 @@ export class LmdView {
     this.redraw.emit();
   }
 
-  private swapElements(selector: (string|number)[], index1: number, index2: number) {
-    let temp = pathTraversal(this.data, [...selector, index1]);
-    pathTraversalSet(this.data, [...selector, index1], pathTraversal(this.data, [...selector, index2]));
-    pathTraversalSet(this.data, [...selector, index2], temp);
-    this.redraw.emit();
-  }
-
-
   private renderHTML() {
     if (this.selectedIndex === undefined) {
       return;
@@ -58,7 +50,7 @@ export class LmdView {
                     {value.map((_x: any, index) => (
                       <div class="array-element property-container">
                         <lmd-input class="property-value" data={this.data} selector={[this.selectedIndex!, key, index]} isEditable={keySettings["editable"]}></lmd-input>
-                        {this.renderPropertyActionButtons(index, key, value)}
+                        {this.renderPropertyActionButtons(index, key)}
                       </div>
                     ))}
                     <lmd-view-edit data={this.data} selectedIndex={this.selectedIndex!} subElement={key}></lmd-view-edit>
@@ -116,21 +108,10 @@ export class LmdView {
    * @param value the object
    * @returns the html to render
    */
-  private renderPropertyActionButtons(index: number, key: string, value: any) {
+  private renderPropertyActionButtons(index: number, key: string) {
     return <div class="interface-buttons">
-      {/*index !== 0 && <button onClick={() => this.swapElements([this.selectedIndex!, key], index - 1, index)}>{this.renderPutUpIcon()}</button>*/}
-      {/*index !== (value.length - 1) && <button onClick={() => this.swapElements([this.selectedIndex!, key], index, index + 1)}>{this.renderPutDownIcon()}</button>*/}
-      {/*index === (value.length - 1) && <button disabled />*/}
       <button class="danger-btn" onClick={() => this.deleteElement([this.selectedIndex!, key, index])}>{this.renderDeleteIcon()}</button>
     </div>;
-  }
-
-  private renderPutDownIcon(): SVGElement {
-    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" /></svg>;
-  }
-
-  private renderPutUpIcon(): SVGElement {
-    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z" /></svg>;
   }
 
   private renderDeleteIcon() {
