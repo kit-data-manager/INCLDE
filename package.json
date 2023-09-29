@@ -1,7 +1,7 @@
 {
-  "name": "lmd-editor",
-  "version": "0.0.1",
-  "description": "Linked Metadata Editor",
+  "name": "@kit-data-manager/inclde",
+  "version": "0.9.0",
+  "description": "An Includable Linked Data Editor, a web component allowing easy modification of JSON-LD in the browser.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,14 +9,15 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/lmd-editor/lmd-editor.esm.js",
+  "unpkg": "dist/inclde/inclde.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seproDev/lmd-editor.git"
+    "url": "https://github.com/kit-data-manager/INCLDE.git"
   },
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "LICENSE"
   ],
   "scripts": {
     "build": "stencil build --docs",

@@ -1,6 +1,6 @@
-# lmd-editor | Linked Metadata Editor
+# INCLDE (/ɪnˈkluːd/) – Includable Linked Data Editor
 
-lmd-editor is a Web Component that allows editing of linked data which was built using [Stencil](https://stenciljs.com/).
+INCLDE (spelled as "include") is a web component that allows editing of linked data. The goal is to allow easy integration into web-based applications.
 
 
 ## Installation
@@ -14,27 +14,26 @@ To start the dev server use the following command:
 npm start
 ```
 
-## Embedding in to existing projects
+## Embedding / including in to existing projects
 
-The Web component can be built using `npm run build` and after embedding the resulting files in to a website, lmd-editor can be invoked like other web components.
-
-
-### Example
+The web component can be built using `npm run build` and after embedding the resulting files in to a website, INCLDE can be invoked like other web components. The components' documentation has a separate, [auto-generated readme file](./src/components/inclde-editor/readme.md). Example:
 
 ```javascript
 fetch("/data/example.jsonld")
   .then((response) => response.json())
   .then((data) => {
-    const lmdEditor = document.createElement("lmd-editor");
-    lmdEditor.data = data;
-    lmdEditor.config = config;
-    lmdEditor.addEventListener('editorClosed', event => {
+    const editor = document.createElement("inclde-editor");
+    editor.data = data;
+    editor.config = config;
+    editor.addEventListener('editorClosed', event => {
       console.log('event', event.detail);
       // Process return data further
     })
-    document.body.appendChild(lmdEditor);
+    document.body.appendChild(editor);
   });
 ```
+
+You may also want to take a look at the [index.html example](./src/index.html), which is what you see when you run `npm start`.
 
 ### Properties
 
@@ -49,7 +48,7 @@ fetch("/data/example.jsonld")
 An example config showcasing all currently available functionality:
 ```JSON
 {
-  "title": "LMD-Editor Test Instance",
+  "title": "INCLDE Demo Instance",
   "hideAttributesByDefault": false,
   "allowNewAttributes": true,
   "attributConfig": [
@@ -78,11 +77,9 @@ Allowing specific attributes to be hidden or set to read only.
 
 ### Events
 
-| Event          | Description | Type                                     |
-| -------------- | ----------- | ---------------------------------------- |
-| `editorClosed` |             | `CustomEvent<NodeObject[] \| undefined>` |
-
-`event.detail` is undefined if the user cancled the editing process. Otherwise it contains the edited data.
+| Event          | Description                                                                                                                                                                  | Type                                                   |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `editorClosed` | Fired when the editor is closed with the save or cancel buttons. `event.detail` contains the edited data if the save button was clicked, undefined otherwise.                | `CustomEvent<NodeObject \| NodeObject[] \| undefined>` |
 
 ## Custom element implementation
 
@@ -129,7 +126,7 @@ export default class ExampleEl implements CustomElement {
 
 ## License
 
-lmd-editor is licensed under MIT License. See [LICENSE](LICENSE) for more information.
+INCLDE (formerly lmd-editor) is licensed under MIT License. See [LICENSE](LICENSE) for more information.
 
-Currently the editor also makes use of icons from [Font Awesome](https://fontawesome.com) 6.4.0 ([License](https://fontawesome.com/license))
+Currently, the editor also makes use of icons from [Font Awesome](https://fontawesome.com) 6.4.0 ([License](https://fontawesome.com/license/free))
 

@@ -10,20 +10,20 @@ import { SelectEvent } from "./utils/events";
 export { NodeObject } from "jsonld";
 export { SelectEvent } from "./utils/events";
 export namespace Components {
-    interface LmdEditor {
+    interface IncldeEditor {
         "config": object | string;
         "data": object | string;
     }
-    interface LmdInput {
+    interface IncldeInput {
         "data": NodeObject[];
         "isEditable": boolean;
         "selector": (string|number)[];
     }
-    interface LmdSidebar {
+    interface IncldeSidebar {
         "data": NodeObject[];
         "selectedIndex"?: number;
     }
-    interface LmdSidebarElement {
+    interface IncldeSidebarElement {
         "data": NodeObject[];
         "globalSelector"?: number;
         "selector"?: number;
@@ -31,174 +31,180 @@ export namespace Components {
     /**
      * This component represents the properties of a selected entity.
      */
-    interface LmdView {
+    interface IncldeView {
         "data": NodeObject[];
         /**
           * The index of the object to render.
          */
         "selectedIndex"?: number;
     }
-    interface LmdViewEdit {
+    interface IncldeViewEdit {
         "data": NodeObject[];
         "selectedIndex": number;
         "subElement"?: string;
     }
-    interface LmdViewLink {
+    interface IncldeViewLink {
         "data": NodeObject[];
         "label": string;
         "selector"?: number;
     }
 }
-export interface LmdEditorCustomEvent<T> extends CustomEvent<T> {
+export interface IncldeEditorCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLLmdEditorElement;
+    target: HTMLIncldeEditorElement;
 }
-export interface LmdInputCustomEvent<T> extends CustomEvent<T> {
+export interface IncldeInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLLmdInputElement;
+    target: HTMLIncldeInputElement;
 }
-export interface LmdSidebarElementCustomEvent<T> extends CustomEvent<T> {
+export interface IncldeSidebarElementCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLLmdSidebarElementElement;
+    target: HTMLIncldeSidebarElementElement;
 }
-export interface LmdViewCustomEvent<T> extends CustomEvent<T> {
+export interface IncldeViewCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLLmdViewElement;
+    target: HTMLIncldeViewElement;
 }
-export interface LmdViewEditCustomEvent<T> extends CustomEvent<T> {
+export interface IncldeViewEditCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLLmdViewEditElement;
+    target: HTMLIncldeViewEditElement;
 }
-export interface LmdViewLinkCustomEvent<T> extends CustomEvent<T> {
+export interface IncldeViewLinkCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLLmdViewLinkElement;
+    target: HTMLIncldeViewLinkElement;
 }
 declare global {
-    interface HTMLLmdEditorElement extends Components.LmdEditor, HTMLStencilElement {
+    interface HTMLIncldeEditorElement extends Components.IncldeEditor, HTMLStencilElement {
     }
-    var HTMLLmdEditorElement: {
-        prototype: HTMLLmdEditorElement;
-        new (): HTMLLmdEditorElement;
+    var HTMLIncldeEditorElement: {
+        prototype: HTMLIncldeEditorElement;
+        new (): HTMLIncldeEditorElement;
     };
-    interface HTMLLmdInputElement extends Components.LmdInput, HTMLStencilElement {
+    interface HTMLIncldeInputElement extends Components.IncldeInput, HTMLStencilElement {
     }
-    var HTMLLmdInputElement: {
-        prototype: HTMLLmdInputElement;
-        new (): HTMLLmdInputElement;
+    var HTMLIncldeInputElement: {
+        prototype: HTMLIncldeInputElement;
+        new (): HTMLIncldeInputElement;
     };
-    interface HTMLLmdSidebarElement extends Components.LmdSidebar, HTMLStencilElement {
+    interface HTMLIncldeSidebarElement extends Components.IncldeSidebar, HTMLStencilElement {
     }
-    var HTMLLmdSidebarElement: {
-        prototype: HTMLLmdSidebarElement;
-        new (): HTMLLmdSidebarElement;
+    var HTMLIncldeSidebarElement: {
+        prototype: HTMLIncldeSidebarElement;
+        new (): HTMLIncldeSidebarElement;
     };
-    interface HTMLLmdSidebarElementElement extends Components.LmdSidebarElement, HTMLStencilElement {
+    interface HTMLIncldeSidebarElementElement extends Components.IncldeSidebarElement, HTMLStencilElement {
     }
-    var HTMLLmdSidebarElementElement: {
-        prototype: HTMLLmdSidebarElementElement;
-        new (): HTMLLmdSidebarElementElement;
+    var HTMLIncldeSidebarElementElement: {
+        prototype: HTMLIncldeSidebarElementElement;
+        new (): HTMLIncldeSidebarElementElement;
     };
     /**
      * This component represents the properties of a selected entity.
      */
-    interface HTMLLmdViewElement extends Components.LmdView, HTMLStencilElement {
+    interface HTMLIncldeViewElement extends Components.IncldeView, HTMLStencilElement {
     }
-    var HTMLLmdViewElement: {
-        prototype: HTMLLmdViewElement;
-        new (): HTMLLmdViewElement;
+    var HTMLIncldeViewElement: {
+        prototype: HTMLIncldeViewElement;
+        new (): HTMLIncldeViewElement;
     };
-    interface HTMLLmdViewEditElement extends Components.LmdViewEdit, HTMLStencilElement {
+    interface HTMLIncldeViewEditElement extends Components.IncldeViewEdit, HTMLStencilElement {
     }
-    var HTMLLmdViewEditElement: {
-        prototype: HTMLLmdViewEditElement;
-        new (): HTMLLmdViewEditElement;
+    var HTMLIncldeViewEditElement: {
+        prototype: HTMLIncldeViewEditElement;
+        new (): HTMLIncldeViewEditElement;
     };
-    interface HTMLLmdViewLinkElement extends Components.LmdViewLink, HTMLStencilElement {
+    interface HTMLIncldeViewLinkElement extends Components.IncldeViewLink, HTMLStencilElement {
     }
-    var HTMLLmdViewLinkElement: {
-        prototype: HTMLLmdViewLinkElement;
-        new (): HTMLLmdViewLinkElement;
+    var HTMLIncldeViewLinkElement: {
+        prototype: HTMLIncldeViewLinkElement;
+        new (): HTMLIncldeViewLinkElement;
     };
     interface HTMLElementTagNameMap {
-        "lmd-editor": HTMLLmdEditorElement;
-        "lmd-input": HTMLLmdInputElement;
-        "lmd-sidebar": HTMLLmdSidebarElement;
-        "lmd-sidebar-element": HTMLLmdSidebarElementElement;
-        "lmd-view": HTMLLmdViewElement;
-        "lmd-view-edit": HTMLLmdViewEditElement;
-        "lmd-view-link": HTMLLmdViewLinkElement;
+        "inclde-editor": HTMLIncldeEditorElement;
+        "inclde-input": HTMLIncldeInputElement;
+        "inclde-sidebar": HTMLIncldeSidebarElement;
+        "inclde-sidebar-element": HTMLIncldeSidebarElementElement;
+        "inclde-view": HTMLIncldeViewElement;
+        "inclde-view-edit": HTMLIncldeViewEditElement;
+        "inclde-view-link": HTMLIncldeViewLinkElement;
     }
 }
 declare namespace LocalJSX {
-    interface LmdEditor {
+    interface IncldeEditor {
         "config": object | string;
         "data": object | string;
-        "onDataUpdated"?: (event: LmdEditorCustomEvent<NodeObject | NodeObject[] | string>) => void;
-        "onEditorClosed"?: (event: LmdEditorCustomEvent<NodeObject | NodeObject[] | undefined>) => void;
+        /**
+          * Fired when the data is updated. Can be used to peek into the data from outside the editor. Not yet reliably fired. Returns the same information as the `editorClosed` event.
+         */
+        "onDataUpdated"?: (event: IncldeEditorCustomEvent<NodeObject | NodeObject[] | string>) => void;
+        /**
+          * Fired when the editor is closed with the save or cancel buttons. `event.detail` contains the edited data if the save button was clicked, undefined otherwise.
+         */
+        "onEditorClosed"?: (event: IncldeEditorCustomEvent<NodeObject | NodeObject[] | undefined>) => void;
     }
-    interface LmdInput {
+    interface IncldeInput {
         "data"?: NodeObject[];
         "isEditable"?: boolean;
-        "onElementSelected"?: (event: LmdInputCustomEvent<SelectEvent>) => void;
+        "onElementSelected"?: (event: IncldeInputCustomEvent<SelectEvent>) => void;
         "selector"?: (string|number)[];
     }
-    interface LmdSidebar {
+    interface IncldeSidebar {
         "data": NodeObject[];
         "selectedIndex"?: number;
     }
-    interface LmdSidebarElement {
+    interface IncldeSidebarElement {
         "data": NodeObject[];
         "globalSelector"?: number;
-        "onElementSelected"?: (event: LmdSidebarElementCustomEvent<SelectEvent>) => void;
+        "onElementSelected"?: (event: IncldeSidebarElementCustomEvent<SelectEvent>) => void;
         "selector"?: number;
     }
     /**
      * This component represents the properties of a selected entity.
      */
-    interface LmdView {
+    interface IncldeView {
         "data": NodeObject[];
-        "onRedraw"?: (event: LmdViewCustomEvent<CustomEvent>) => void;
+        "onRedraw"?: (event: IncldeViewCustomEvent<CustomEvent>) => void;
         /**
           * The index of the object to render.
          */
         "selectedIndex"?: number;
     }
-    interface LmdViewEdit {
+    interface IncldeViewEdit {
         "data": NodeObject[];
-        "onRedraw"?: (event: LmdViewEditCustomEvent<CustomEvent>) => void;
+        "onRedraw"?: (event: IncldeViewEditCustomEvent<CustomEvent>) => void;
         "selectedIndex": number;
         "subElement"?: string;
     }
-    interface LmdViewLink {
+    interface IncldeViewLink {
         "data"?: NodeObject[];
         "label"?: string;
-        "onElementSelected"?: (event: LmdViewLinkCustomEvent<SelectEvent>) => void;
+        "onElementSelected"?: (event: IncldeViewLinkCustomEvent<SelectEvent>) => void;
         "selector"?: number;
     }
     interface IntrinsicElements {
-        "lmd-editor": LmdEditor;
-        "lmd-input": LmdInput;
-        "lmd-sidebar": LmdSidebar;
-        "lmd-sidebar-element": LmdSidebarElement;
-        "lmd-view": LmdView;
-        "lmd-view-edit": LmdViewEdit;
-        "lmd-view-link": LmdViewLink;
+        "inclde-editor": IncldeEditor;
+        "inclde-input": IncldeInput;
+        "inclde-sidebar": IncldeSidebar;
+        "inclde-sidebar-element": IncldeSidebarElement;
+        "inclde-view": IncldeView;
+        "inclde-view-edit": IncldeViewEdit;
+        "inclde-view-link": IncldeViewLink;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "lmd-editor": LocalJSX.LmdEditor & JSXBase.HTMLAttributes<HTMLLmdEditorElement>;
-            "lmd-input": LocalJSX.LmdInput & JSXBase.HTMLAttributes<HTMLLmdInputElement>;
-            "lmd-sidebar": LocalJSX.LmdSidebar & JSXBase.HTMLAttributes<HTMLLmdSidebarElement>;
-            "lmd-sidebar-element": LocalJSX.LmdSidebarElement & JSXBase.HTMLAttributes<HTMLLmdSidebarElementElement>;
+            "inclde-editor": LocalJSX.IncldeEditor & JSXBase.HTMLAttributes<HTMLIncldeEditorElement>;
+            "inclde-input": LocalJSX.IncldeInput & JSXBase.HTMLAttributes<HTMLIncldeInputElement>;
+            "inclde-sidebar": LocalJSX.IncldeSidebar & JSXBase.HTMLAttributes<HTMLIncldeSidebarElement>;
+            "inclde-sidebar-element": LocalJSX.IncldeSidebarElement & JSXBase.HTMLAttributes<HTMLIncldeSidebarElementElement>;
             /**
              * This component represents the properties of a selected entity.
              */
-            "lmd-view": LocalJSX.LmdView & JSXBase.HTMLAttributes<HTMLLmdViewElement>;
-            "lmd-view-edit": LocalJSX.LmdViewEdit & JSXBase.HTMLAttributes<HTMLLmdViewEditElement>;
-            "lmd-view-link": LocalJSX.LmdViewLink & JSXBase.HTMLAttributes<HTMLLmdViewLinkElement>;
+            "inclde-view": LocalJSX.IncldeView & JSXBase.HTMLAttributes<HTMLIncldeViewElement>;
+            "inclde-view-edit": LocalJSX.IncldeViewEdit & JSXBase.HTMLAttributes<HTMLIncldeViewEditElement>;
+            "inclde-view-link": LocalJSX.IncldeViewLink & JSXBase.HTMLAttributes<HTMLIncldeViewLinkElement>;
         }
     }
 }
