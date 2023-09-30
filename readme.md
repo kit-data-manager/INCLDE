@@ -1,7 +1,9 @@
-# INCLDE (/ɪnˈkluːd/) – Includable Linked Data Editor
+# INCLDE – Includable Linked Data Editor
 
-INCLDE (spelled as "include") is a web component that allows editing of linked data. The goal is to allow easy integration into web-based applications.
+INCLDE (spelled "/ɪnˈkluːd/", as "include") is a web component that allows editing of linked data. The goal is to allow easy integration into web-based applications.
 
+- [Demo](https://kit-data-manager.github.io/INCLDE/)
+- [NPM Package](https://www.npmjs.com/package/@kit-data-manager/inclde)
 
 ## Installation
 
