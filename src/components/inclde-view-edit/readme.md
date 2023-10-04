@@ -27,9 +27,14 @@
 
  - [inclde-view](../inclde-view)
 
+### Depends on
+
+- [inclde-help-spot](../inclde-help-spot)
+
 ### Graph
 ```mermaid
 graph TD;
+  inclde-view-edit --> inclde-help-spot
   inclde-view --> inclde-view-edit
   style inclde-view-edit fill:#f9f,stroke:#333,stroke-width:4px
 ```

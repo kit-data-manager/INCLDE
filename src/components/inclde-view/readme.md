@@ -41,6 +41,7 @@ graph TD;
   inclde-view --> inclde-input
   inclde-view --> inclde-view-edit
   inclde-input --> inclde-view-link
+  inclde-view-edit --> inclde-help-spot
   inclde-editor --> inclde-view
   style inclde-view fill:#f9f,stroke:#333,stroke-width:4px
 ```

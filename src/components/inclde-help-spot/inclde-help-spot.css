@@ -1,0 +1,25 @@
+:host {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.question-mark {
+  cursor: help;
+}
+
+.tooltip {
+  /* Hide the tooltip by default */
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0.3em;
+  z-index: 1;
+}
+
+/* Show the tooltip when hovering over the question mark icon */
+.question-mark:hover + .tooltip {
+  display: inline-block;
+}

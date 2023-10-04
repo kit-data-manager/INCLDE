@@ -14,6 +14,9 @@ export namespace Components {
         "config": object | string;
         "data": object | string;
     }
+    interface IncldeHelpSpot {
+        "helpText": string;
+    }
     interface IncldeInput {
         "data": NodeObject[];
         "isEditable": boolean;
@@ -80,6 +83,12 @@ declare global {
         prototype: HTMLIncldeEditorElement;
         new (): HTMLIncldeEditorElement;
     };
+    interface HTMLIncldeHelpSpotElement extends Components.IncldeHelpSpot, HTMLStencilElement {
+    }
+    var HTMLIncldeHelpSpotElement: {
+        prototype: HTMLIncldeHelpSpotElement;
+        new (): HTMLIncldeHelpSpotElement;
+    };
     interface HTMLIncldeInputElement extends Components.IncldeInput, HTMLStencilElement {
     }
     var HTMLIncldeInputElement: {
@@ -121,6 +130,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "inclde-editor": HTMLIncldeEditorElement;
+        "inclde-help-spot": HTMLIncldeHelpSpotElement;
         "inclde-input": HTMLIncldeInputElement;
         "inclde-sidebar": HTMLIncldeSidebarElement;
         "inclde-sidebar-element": HTMLIncldeSidebarElementElement;
@@ -141,6 +151,9 @@ declare namespace LocalJSX {
           * Fired when the editor is closed with the save or cancel buttons. `event.detail` contains the edited data if the save button was clicked, undefined otherwise.
          */
         "onEditorClosed"?: (event: IncldeEditorCustomEvent<NodeObject | NodeObject[] | undefined>) => void;
+    }
+    interface IncldeHelpSpot {
+        "helpText"?: string;
     }
     interface IncldeInput {
         "data"?: NodeObject[];
@@ -183,6 +196,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "inclde-editor": IncldeEditor;
+        "inclde-help-spot": IncldeHelpSpot;
         "inclde-input": IncldeInput;
         "inclde-sidebar": IncldeSidebar;
         "inclde-sidebar-element": IncldeSidebarElement;
@@ -196,6 +210,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "inclde-editor": LocalJSX.IncldeEditor & JSXBase.HTMLAttributes<HTMLIncldeEditorElement>;
+            "inclde-help-spot": LocalJSX.IncldeHelpSpot & JSXBase.HTMLAttributes<HTMLIncldeHelpSpotElement>;
             "inclde-input": LocalJSX.IncldeInput & JSXBase.HTMLAttributes<HTMLIncldeInputElement>;
             "inclde-sidebar": LocalJSX.IncldeSidebar & JSXBase.HTMLAttributes<HTMLIncldeSidebarElement>;
             "inclde-sidebar-element": LocalJSX.IncldeSidebarElement & JSXBase.HTMLAttributes<HTMLIncldeSidebarElementElement>;
