@@ -67,7 +67,7 @@ export class IncldeSidebarElement {
             </div>}
             <div class="column header-column">
               <span class="sidebar-label">{jsonLdNodeToName(this.selctedElement)}</span>
-              {jsonLdNodeToType(this.selctedElement).map((y: string) => <span class="sidebar-type">{y}</span>)}
+              {jsonLdNodeToType(this.selctedElement).map((y: string) => <span class="sidebar-type" key={y}>{y}</span>)}
             </div>
           </div>
           {subNodes.size > 0 && <div class="sidebar-item-children">
