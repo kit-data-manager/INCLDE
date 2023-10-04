@@ -5,6 +5,7 @@
 
 .question-mark {
   cursor: help;
+  fill: #999999;
 }
 
 .tooltip {
