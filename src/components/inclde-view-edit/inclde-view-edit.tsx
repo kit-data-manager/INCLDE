@@ -133,45 +133,64 @@ export class IncldeViewEdit {
         <Host>
           <div>
             {this.subElement === undefined &&
-            <div>
-              Name:
-              <input list="possible_attributes" id="new-attribute" type="text" value={this.attributeName} onInput={(event) => this.onAttributeNameChange(event)}></input>
+            <div class="flex-container">
+              <label htmlFor="new-attribute" title='The relation of the new attribute from the view of the selected object.'>
+                <inclde-help-spot helpText='The relation of the new attribute from the view of the selected object.'></inclde-help-spot>
+                {"Relation:"}
+              </label>
+              <input id="new-attribute" type="text" class="flex-value" list="possible_attributes" value={this.attributeName} onInput={(event: any) => this.onAttributeNameChange(event)}></input>
               {this.subElement === undefined &&
                 <datalist id="possible_attributes">
                   {propertiesList.map((property) => {
-                    return (<option value={property} label={property.replace("https://schema.org/", "")}/>);
+                    return (<option value={property} label={property.replace("https://schema.org/", "") + " - " + property} key={property}/>);
                   })}
                 </datalist>
               }
             </div>
             }
             {this.attributeName !== "" &&
-              <div>
-                Type: <input list="possible_types" id="new-type" type="text" value={this.attributeType} onInput={(event) => this.onTypeChange(event)}></input>
+              <div class="flex-container">
+                <label htmlFor="new-type">
+                  <inclde-help-spot helpText='Choose which type of information to add as an attribute.'></inclde-help-spot>
+                  {"Type:"}
+                </label>
+                <input list="possible_types" id="new-type" type="text" class="flex-value" value={this.attributeType} onInput={(event) => this.onTypeChange(event)}></input>
                 <datalist id="possible_types">
                   <option value="boolean" label="Native Boolean type"/>
                   <option value="number" label="Native Number type"/>
                   <option value="string" label="Native String type"/>
                   <option value="array" label="Native Array type"/>
-                  {(this.schemaDotOrgDefinition.getDataTypesByProperty(this.attributeName) || []).map((type) => {
-                    return (<option value={type} label={type.replace("https://schema.org/", "")}/>);
+                  {(this.schemaDotOrgDefinition.getDataTypesByProperty(this.attributeName) ?? []).map((type) => {
+                    return (<option value={type} label={type.replace("https://schema.org/", "") + " - " + type} key={type}/>);
                   })}
                 </datalist>
               </div>
             }
             {this.attributeType === "boolean" &&
-              <div>
-                Value: <input id="new-value" type="checkbox" onInput={(event) => this.onValueChange(event)} />
+              <div class="flex-container">
+                <label htmlFor="new-value">
+                  <inclde-help-spot helpText='Choose a boolean value (true or false) for the new attribute.'></inclde-help-spot>
+                  {"Value:"}
+                </label>
+                <input id="new-value" type="checkbox" class="flex-value" onInput={(event) => this.onValueChange(event)} />
               </div>
             }
             {this.attributeType === "number" &&
-              <div>
-                Value: <input id="new-value" type="number" onInput={(event) => this.onValueChange(event)} />
+              <div class="flex-container">
+                <label htmlFor="new-value">
+                  <inclde-help-spot helpText='Choose a number for the new attribute.'></inclde-help-spot>
+                  {"Value:"}
+                </label>
+                <input id="new-value" type="number" class="flex-value" onInput={(event) => this.onValueChange(event)} />
               </div>
             }
             {this.attributeType === "string" &&
-              <div>
-                Value: <input id="new-value" type="text" onInput={(event) => this.onValueChange(event)} />
+              <div class="flex-container">
+                <label htmlFor="new-value">
+                  <inclde-help-spot helpText='Choose a string value for the new attribute.'></inclde-help-spot>
+                  {"Value:"}
+                </label>
+                <input id="new-value" type="text" class="flex-value" onInput={(event) => this.onValueChange(event)} />
               </div>
             }
             {this.attributeType === "array" &&
@@ -180,12 +199,15 @@ export class IncldeViewEdit {
             }
             {this.attributeType !== "boolean" && this.attributeType !== "number" && this.attributeType !== "string" && this.attributeType !== "array" && this.attributeType !== "" &&
             <div>
-              <div>
-                ID:
-                <input list="possible_ids" id="new-value" type="text" onInput={(event) => this.onValueChange(event)} ></input>
+              <div class="flex-container">
+                <label htmlFor="new-value">
+                  <inclde-help-spot helpText='Choose a new ID for a new attribute, or an existing ID to connect an existing one.'></inclde-help-spot>
+                  {"ID:"}
+                </label>
+                <input list="possible_ids" id="new-value" type="text" class="flex-value" onInput={(event) => this.onValueChange(event)} ></input>
                 <datalist id="possible_ids">
                   {jsonLdGetByType(this.data, this.attributeType).map((type) => {
-                    return (<option value={type}/>);
+                    return (<option value={type} key={type}/>);
                   })}
                 </datalist>
                 {}
