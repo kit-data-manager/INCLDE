@@ -47,7 +47,7 @@ inclde-input {
 }
 
 .interface-buttons button {
-  vertical-align: bottom;
+  vertical-align:text-bottom;
   background: none;
   border: none;
   padding: 0px;
@@ -65,6 +65,7 @@ inclde-input {
   width: 20px;
   height: 20px;
   fill: #777;
+  vertical-align: top;
 }
 
 
