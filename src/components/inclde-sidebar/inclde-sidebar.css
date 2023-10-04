@@ -6,3 +6,27 @@
   padding-left: 15px;
   border: 1px solid #999999;
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0.3em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #aaa;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 1em;
+  padding: 0.3em;
+}
+
+button inclde-help-spot {
+  margin: 0;
+  margin-right: 0.5em;
+}
