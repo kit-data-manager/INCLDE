@@ -4,6 +4,9 @@
 
 label {
   margin-right: 1em;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 inclde-help-spot {
