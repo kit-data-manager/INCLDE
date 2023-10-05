@@ -16,11 +16,13 @@
 
 ### Used by
 
+ - [inclde-add-node-dialogue](../inclde-add-node-dialogue)
  - [inclde-view-edit](../inclde-view-edit)
 
 ### Graph
 ```mermaid
 graph TD;
+  inclde-add-node-dialogue --> inclde-help-spot
   inclde-view-edit --> inclde-help-spot
   style inclde-help-spot fill:#f9f,stroke:#333,stroke-width:4px
 ```
