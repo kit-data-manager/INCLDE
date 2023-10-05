@@ -1,10 +1,15 @@
 import * as jsonld from 'jsonld';
 
 export function jsonLdNodeToName(node: jsonld.NodeObject): string {
-  if (node["http://schema.org/name"] !== undefined && Array.isArray(node["http://schema.org/name"])
-  && node["http://schema.org/name"][0] !== undefined) {
-    let nameObject = node["http://schema.org/name"][0] as jsonld.ValueObject;
+  const nameThing = node["https://schema.org/name"] ?? node["http://schema.org/name"];
+  console.log(nameThing);
+  if (Array.isArray(nameThing) && nameThing[0] !== undefined && typeof nameThing[0] === "object") {
+    let nameObject = nameThing[0] as jsonld.ValueObject;
     return nameObject["@value"] as string;
+  } else if (Array.isArray(nameThing) && nameThing[0] !== undefined && typeof nameThing[0] === "string") {
+    return nameThing[0] as string;
+  } else if (typeof nameThing === "string") {
+    return nameThing;
   } else if (node["@id"] !== undefined) {
     return node["@id"] as string;
   } else {
