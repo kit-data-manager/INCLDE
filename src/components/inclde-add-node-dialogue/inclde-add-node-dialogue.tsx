@@ -249,7 +249,7 @@ export class IncldeAddNodeDialogue {
         {!relationIsNullish && (this.schemaDotOrgDefinition.getDataTypesByProperty(this.attributeRelation) ?? []).map((type) => {
           return (<option value={type} label={type.replace("https://schema.org/", "") + " - " + type} key={type} />);
         })}
-        {relationIsNullish && (this.schemaDotOrgDefinition.getAllTypes()).map((type) => {
+        {relationIsNullish && (this.schemaDotOrgDefinition.getAllClasses()).map((type) => {
           return (<option value={type} label={type.replace("https://schema.org/", "") + " - " + type} key={type} />);
         })}
       </datalist>
