@@ -20,20 +20,15 @@ The functionality of the inclde-view-edit component is currently:
 The functionality of the inclde-add-node-dialogue component is currently:
 
 - (NODE) Add a new node to the data (main purpose)
-- (RELATION) Add a relation to an existing node, if such a node is given to the component
-
-TODO:
-
-- ARRAY_ELEMENT functionality
-- Make sure the replacement works visually well
+- (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
 
 ## Properties
 
-| Property            | Attribute          | Description                                                                                                                         | Type                      | Default     |
-| ------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ----------- |
-| `allowPrimitives`   | `allow-primitives` | Setting to determine if it is allowed to add primitives to the data.                                                                | `boolean`                 | `false`     |
-| `data` _(required)_ | --                 | The data to which the new node should be added.                                                                                     | `NodeObject[]`            | `undefined` |
-| `relationTo`        | --                 | The node to which the new node should be connected to, if desired. Setting this property will add a relation field to the dialogue. | `NodeObject \| undefined` | `undefined` |
+| Property            | Attribute          | Description                                                                                                                         | Type                  | Default     |
+| ------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ----------- |
+| `allowPrimitives`   | `allow-primitives` | Setting to determine if it is allowed to add primitives to the data.                                                                | `boolean`             | `false`     |
+| `data` _(required)_ | --                 | The data to which the new node should be added.                                                                                     | `NodeObject[]`        | `undefined` |
+| `relationTo`        | `relation-to`      | The node to which the new node should be connected to, if desired. Setting this property will add a relation field to the dialogue. | `string \| undefined` | `undefined` |
 
 
 ## Events

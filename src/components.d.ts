@@ -6,8 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { NodeObject } from "jsonld";
+import { JsonLdId } from "./utils/types";
 import { SelectEvent } from "./utils/events";
 export { NodeObject } from "jsonld";
+export { JsonLdId } from "./utils/types";
 export { SelectEvent } from "./utils/events";
 export namespace Components {
     /**
@@ -20,10 +22,7 @@ export namespace Components {
      * - (ARRAY_ELEMENT) Add a element to an array attribute of the selected node, if subElement property is set
      * The functionality of the inclde-add-node-dialogue component is currently:
      * - (NODE) Add a new node to the data (main purpose)
-     * - (RELATION) Add a relation to an existing node, if such a node is given to the component
-     * TODO:
-     * - ARRAY_ELEMENT functionality
-     * - Make sure the replacement works visually well
+     * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
      */
     interface IncldeAddNodeDialogue {
         /**
@@ -37,7 +36,7 @@ export namespace Components {
         /**
           * The node to which the new node should be connected to, if desired. Setting this property will add a relation field to the dialogue.
          */
-        "relationTo"?: NodeObject;
+        "relationTo"?: JsonLdId;
     }
     interface IncldeEditor {
         "config": object | string;
@@ -120,10 +119,7 @@ declare global {
      * - (ARRAY_ELEMENT) Add a element to an array attribute of the selected node, if subElement property is set
      * The functionality of the inclde-add-node-dialogue component is currently:
      * - (NODE) Add a new node to the data (main purpose)
-     * - (RELATION) Add a relation to an existing node, if such a node is given to the component
-     * TODO:
-     * - ARRAY_ELEMENT functionality
-     * - Make sure the replacement works visually well
+     * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
      */
     interface HTMLIncldeAddNodeDialogueElement extends Components.IncldeAddNodeDialogue, HTMLStencilElement {
     }
@@ -205,10 +201,7 @@ declare namespace LocalJSX {
      * - (ARRAY_ELEMENT) Add a element to an array attribute of the selected node, if subElement property is set
      * The functionality of the inclde-add-node-dialogue component is currently:
      * - (NODE) Add a new node to the data (main purpose)
-     * - (RELATION) Add a relation to an existing node, if such a node is given to the component
-     * TODO:
-     * - ARRAY_ELEMENT functionality
-     * - Make sure the replacement works visually well
+     * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
      */
     interface IncldeAddNodeDialogue {
         /**
@@ -226,7 +219,7 @@ declare namespace LocalJSX {
         /**
           * The node to which the new node should be connected to, if desired. Setting this property will add a relation field to the dialogue.
          */
-        "relationTo"?: NodeObject;
+        "relationTo"?: JsonLdId;
     }
     interface IncldeEditor {
         "config": object | string;
@@ -308,10 +301,7 @@ declare module "@stencil/core" {
              * - (ARRAY_ELEMENT) Add a element to an array attribute of the selected node, if subElement property is set
              * The functionality of the inclde-add-node-dialogue component is currently:
              * - (NODE) Add a new node to the data (main purpose)
-             * - (RELATION) Add a relation to an existing node, if such a node is given to the component
-             * TODO:
-             * - ARRAY_ELEMENT functionality
-             * - Make sure the replacement works visually well
+             * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
              */
             "inclde-add-node-dialogue": LocalJSX.IncldeAddNodeDialogue & JSXBase.HTMLAttributes<HTMLIncldeAddNodeDialogueElement>;
             "inclde-editor": LocalJSX.IncldeEditor & JSXBase.HTMLAttributes<HTMLIncldeEditorElement>;

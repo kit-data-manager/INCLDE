@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Event, Host, Prop, State, h } from '@stencil/core';
 import { NodeObject } from 'jsonld';
 import { SchemaDotOrg } from '../../schema-loader/schema-dot-org';
-import { jsonLdGetByID, jsonLdGetByType } from '../../utils/utils';
+import { isNullish, jsonLdGetByID, jsonLdGetByType, jsonLdNodeToTypeIds } from '../../utils/utils';
+import { JsonLdId } from '../../utils/types';
 
 /**
  * This class represents the dialogue that is shown when the user wants to add a new node.
@@ -17,13 +18,8 @@ import { jsonLdGetByID, jsonLdGetByType } from '../../utils/utils';
  * The functionality of the inclde-add-node-dialogue component is currently:
  * 
  * - (NODE) Add a new node to the data (main purpose)
- * - (RELATION) Add a relation to an existing node, if such a node is given to the component
- * 
- * TODO:
- * 
- * - ARRAY_ELEMENT functionality
- * - Make sure the replacement works visually well
- */
+ * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
+*/
 @Component({
   tag: 'inclde-add-node-dialogue',
   styleUrl: 'inclde-add-node-dialogue.css',
@@ -43,7 +39,7 @@ export class IncldeAddNodeDialogue {
    * The node to which the new node should be connected to, if desired.
    * Setting this property will add a relation field to the dialogue.
    */
-  @Prop() relationTo?: NodeObject;
+  @Prop() relationTo?: JsonLdId;
   /**
    * Setting to determine if it is allowed to add primitives to the data.
    */
@@ -88,17 +84,21 @@ export class IncldeAddNodeDialogue {
    * @param id The ID of the node to point at.
    */
   private setRelation(id: string) {
-    let isNullishId = id === null || id === undefined || id === '';
-    if (isNullishId) { return; }
+    if (isNullish(id) || isNullish(this.relationTo)) { return; }
 
-    if (!!this.relationTo && this.relationTo['@graph']) {
-      let graph = this.relationTo['@graph'];
-      let pointer = { "@id": id };
-      if (Array.isArray(graph)) {
-        graph.push(pointer);
-      } else {
-        graph = [graph, pointer];
-      }
+    let relatedToIndex: number | undefined = jsonLdGetByID(this.data, this.relationTo);
+    if (relatedToIndex === undefined) { return []; }
+    let relatedToNode: { [key: string]: any } = this.data[relatedToIndex] as { [key: string]: any };
+    console.log("found relatedToNode", relatedToNode);
+
+    if (relatedToNode[this.attributeRelation] === undefined) {
+      relatedToNode[this.attributeRelation] = id;
+    } else if (Array.isArray(relatedToNode[this.attributeRelation])) {
+      let array = relatedToNode[this.attributeRelation];
+      array.push(id);
+      relatedToNode[this.attributeRelation] = array;
+    } else {
+      relatedToNode[this.attributeRelation] = [relatedToNode[this.attributeRelation], id];
     }
   }
 
@@ -151,20 +151,23 @@ export class IncldeAddNodeDialogue {
   private renderClosedState(): any {
     return (
         <button onClick={() => this.isOpen = true}>
-            <inclde-help-spot helpText='Creates a new item. It can be connected later.'></inclde-help-spot>
-            <span>Create new standalone item</span>
+            <inclde-help-spot helpText='Creates a new item. It can be connected with others later.'></inclde-help-spot>
+            <span>Create new item</span>
         </button>
     );
   }
 
   private renderOpenState(): any {
-    // render three input fields for name, type and value, and a button to add the attribute. But only show the next field each if the previous field is filled out.
+    // Render three input fields for name, type and value, and a button to add the attribute.
+    // But only show the next field each if the previous field is filled out.
+    let relationRequired = !isNullish(this.relationTo);
+    let hasValueInput = this.attributeValue !== undefined && (typeof this.attributeValue !== 'string' || this.attributeValue.length > 0);
     return (
       <div>
-        {this.relationTo && this.renderRelationField()}
-        {(this.attributeRelation.length > 0 || !this.relationTo) && this.renderTypeField()}
-        {(this.attributeType.length > 0 || !this.relationTo) && this.renderValueField()}
-        <button onClick={() => this.addAttribute()}>Save</button>
+        {relationRequired && this.renderRelationField()}
+        {(this.attributeRelation.length > 0 || !relationRequired) && this.renderTypeField()}
+        {(this.attributeType.length > 0) && this.renderValueField()}
+        {(this.attributeType.length > 0 && hasValueInput) && <button onClick={() => this.addAttribute()}>Create</button>}
         <button onClick={() => this.isOpen = false}>Cancel</button>
       </div>
     );
@@ -285,12 +288,22 @@ export class IncldeAddNodeDialogue {
     }
   }
 
-  private getRelationList(): string[] {
-    if (!this.relationTo) {
+  private getRelationList(): JsonLdId[] {
+    if (isNullish(this.relationTo)) {
       return [];
     } else {
       let propertiesList: string[] | undefined;
-      let type = this.relationTo["@type"];
+      let relatedToIndex: number | undefined = jsonLdGetByID(this.data, this.relationTo);
+      if (relatedToIndex === undefined) { return []; }
+      let relatedToNode: NodeObject = this.data[relatedToIndex];
+      let typeIDs: string[] = jsonLdNodeToTypeIds(relatedToNode);
+      //let typeNames: string[] = typeIDs
+      //  .map((id) => jsonLdGetByID(this.data, id))
+      //  .filter((index) => index !== undefined)
+      //  .map((index) => this.data[index!])
+      //  .filter((node) => node !== undefined)
+      //  .map((node) => jsonLdNodeToName(node));
+      let type = typeIDs;
       if (Array.isArray(type)) {
         let tempList: string[] = [];
         type.forEach((id) => {
