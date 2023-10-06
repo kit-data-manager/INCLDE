@@ -150,10 +150,12 @@ export class IncldeAddNodeDialogue {
 
   private renderClosedState(): any {
     return (
-        <button onClick={() => this.isOpen = true}>
+      <div class="container">
+        <button onClick={() => this.isOpen = true} class="closed">
             <inclde-help-spot helpText='Creates a new item. It can be connected with others later.'></inclde-help-spot>
             <span>Create new item</span>
         </button>
+      </div>
     );
   }
 
@@ -163,7 +165,7 @@ export class IncldeAddNodeDialogue {
     let relationRequired = !isNullish(this.relationTo);
     let hasValueInput = this.attributeValue !== undefined && (typeof this.attributeValue !== 'string' || this.attributeValue.length > 0);
     return (
-      <div>
+      <div class="container">
         {relationRequired && this.renderRelationField()}
         {(this.attributeRelation.length > 0 || !relationRequired) && this.renderTypeField()}
         {(this.attributeType.length > 0) && this.renderValueField()}

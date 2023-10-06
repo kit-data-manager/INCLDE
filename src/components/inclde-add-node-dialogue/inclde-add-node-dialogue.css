@@ -1,3 +1,17 @@
 :host {
   display: block;
 }
+
+.container {
+  margin: 1em;
+  padding-top: 1em;
+  border-top: 1px solid #aaa;
+}
+
+.closed {
+  display: flex;
+}
+
+button inclde-help-spot {
+  margin-right: 0.3em;
+}
