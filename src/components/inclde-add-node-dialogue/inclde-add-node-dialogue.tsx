@@ -151,7 +151,7 @@ export class IncldeAddNodeDialogue {
   private renderClosedState(): any {
     return (
       <div class="container">
-        <button onClick={() => this.isOpen = true} class="closed">
+        <button onClick={() => this.isOpen = true}>
             <inclde-help-spot helpText='Creates a new item. It can be connected with others later.'></inclde-help-spot>
             <span>Create new item</span>
         </button>
@@ -169,17 +169,19 @@ export class IncldeAddNodeDialogue {
         {relationRequired && this.renderRelationField()}
         {(this.attributeRelation.length > 0 || !relationRequired) && this.renderTypeField()}
         {(this.attributeType.length > 0) && this.renderValueField()}
-        {(this.attributeType.length > 0 && hasValueInput) && <button onClick={() => this.addAttribute()}>Create</button>}
-        <button onClick={() => this.isOpen = false}>Cancel</button>
+        <div class="flex-container">
+          <button onClick={() => this.addAttribute()} disabled={!(this.attributeType.length > 0 && hasValueInput)}>Create</button>
+          <button onClick={() => this.isOpen = false}>Cancel</button>
+        </div>
       </div>
     );
   }
 
   private renderValueField(): any {
     let isPrimitiveType = this.typeSpecificContent.map((content) => content.name).includes(this.attributeType);
-    let renderIdInput = <div>
+    let renderIdInput =
       <div class="flex-container">
-        <label htmlFor="new-value">
+        <label htmlFor="new-value" class="flex-container">
           <inclde-help-spot helpText='Choose a new ID for a new attribute, or an existing ID to connect an existing one.'></inclde-help-spot>
           {"ID:"}
         </label>
@@ -190,23 +192,22 @@ export class IncldeAddNodeDialogue {
           })}
         </datalist>
         { }
-      </div>
-    </div>
-    return (
-      <div>
-        {isPrimitiveType ? this.renderPrimitiveInput() : renderIdInput}
-      </div>
-    );
+      </div>;
+    if (isPrimitiveType) {
+      return this.renderPrimitiveInput();
+    } else {
+      return renderIdInput;
+    }
   }
 
-  private renderPrimitiveInput() {
+  private renderPrimitiveInput(): any {
     let isPrimitiveType: boolean = this.typeSpecificContent.map((content) => content.name).includes(this.attributeType);
     let hasInputElementType: boolean = this.typeSpecificContent.find((content) => content.name === this.attributeType)?.inputElementType !== undefined;
     if (!isPrimitiveType || !hasInputElementType) {
       return;
     }
     return <div class="flex-container">
-      <label htmlFor="new-value">
+      <label htmlFor="new-value" class="flex-container">
         <inclde-help-spot helpText={this.typeSpecificContent.find((content) => content.name === this.attributeType)?.helpText}></inclde-help-spot>
         {"Value:"}
       </label>
@@ -217,7 +218,7 @@ export class IncldeAddNodeDialogue {
   private renderRelationField(): any {
     return (
       <div class="flex-container">
-        <label htmlFor="new-relation" title='The relation of the new attribute from the view of the selected object.'>
+        <label htmlFor="new-relation" title='The relation of the new attribute from the view of the selected object.' class="flex-container">
           <inclde-help-spot helpText='The relation of the new attribute from the view of the selected object.'></inclde-help-spot>
           {"Relation:"}
         </label>
@@ -241,7 +242,7 @@ export class IncldeAddNodeDialogue {
   private renderTypeField(): any {
     let relationIsNullish = this.attributeRelation === null || this.attributeRelation === undefined || this.attributeRelation === '';
     return (<div class="flex-container">
-      <label htmlFor="new-type">
+      <label htmlFor="new-type" class="flex-container">
         <inclde-help-spot helpText='Choose which type of information to add as an attribute.'></inclde-help-spot>
         {"Type:"}
       </label>

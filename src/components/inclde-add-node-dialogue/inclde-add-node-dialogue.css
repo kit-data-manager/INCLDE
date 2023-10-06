@@ -8,10 +8,30 @@
   border-top: 1px solid #aaa;
 }
 
-.closed {
+.flex-container {
   display: flex;
 }
 
-button inclde-help-spot {
+.flex-value {
+  flex-grow: 1;
+}
+
+button {
+  display: flex;
+}
+
+inclde-help-spot {
   margin-right: 0.3em;
+}
+
+.flex-container + .flex-container {
+  margin-top: 0.2em;
+}
+
+button + button {
+  margin-left: 0.5em;
+}
+
+label + input {
+  margin-left: 0.5em;
 }
