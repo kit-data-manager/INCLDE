@@ -111,11 +111,11 @@ export class IncldeAddNodeDialogue {
     let newObj: NodeObject | undefined;
 
     if (this.attributeType === 'string') {
-      newValue = this.attributeValue || '';
+      newValue = this.attributeValue ?? '';
     } else if (this.attributeType === 'number') {
-      newValue = this.attributeValue || 0;
+      newValue = this.attributeValue ?? 0;
     } else if (this.attributeType === 'boolean') {
-      newValue = this.attributeValue || false;
+      newValue = this.attributeValue ?? false;
     } else if (this.attributeType === 'array') {
       newValue = [];
     } else {
