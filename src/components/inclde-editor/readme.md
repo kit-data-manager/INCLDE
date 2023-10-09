@@ -34,7 +34,9 @@ graph TD;
   inclde-editor --> inclde-sidebar
   inclde-editor --> inclde-view
   inclde-sidebar --> inclde-sidebar-element
+  inclde-sidebar --> inclde-add-node-dialogue
   inclde-sidebar-element --> inclde-sidebar-element
+  inclde-add-node-dialogue --> inclde-help-spot
   inclde-view --> inclde-input
   inclde-view --> inclde-view-edit
   inclde-input --> inclde-view-link

@@ -33,6 +33,48 @@ export class SchemaDotOrg {
     this.schema = await this.schemaPromise;
   }
 
+  /**
+   * Returns a list of all classes in the schema.
+   * These are the types for the objects expected in the sidebar.
+   * @returns A list of all classes in the schema
+   */
+  public getAllClasses() : string[] {
+    if (!Array.isArray(this.schema))  {
+      console.log("Schema is not an array: ", this.schema);
+      return [];
+    }
+    return this.schema
+      .filter((node: NodeObject) => {
+        let type: string | string[] | undefined = node['@type'];
+        if (type === undefined) {
+          return false;
+        }
+        if (!Array.isArray(type)) {
+          type = [type];
+        }
+        return type.filter((type: string) => {
+          let isSchemaOrgClass = type === 'https://schema.org/Class';
+          let isRdfsClass = type === 'http://www.w3.org/2000/01/rdf-schema#Class';
+          let endWithSlashClass = typeof type === 'string' && type.toLowerCase().endsWith('/class');
+          let endsWithHashClass = typeof type === 'string' && type.toLowerCase().endsWith('#class');
+          let endsWithColonClass = typeof type === 'string' && type.toLowerCase().endsWith(':class');
+          return isSchemaOrgClass || isRdfsClass || endWithSlashClass || endsWithHashClass || endsWithColonClass;
+        })
+        .length > 0;
+      })
+      .flatMap((node: NodeObject) => {
+        let id: string[] | string | undefined = node['@id'];
+        let isEmptyOrNullish = id === undefined || id === null || id === '';
+        if (isEmptyOrNullish) {
+          return [];
+        } else if (Array.isArray(id)) {
+          return id;
+        } else {
+          return [id!];
+        }
+      });
+  }
+
   private getById(id: string) {
     if (!Array.isArray(this.schema))  {
       return;

@@ -3,9 +3,23 @@
   vertical-align: middle;
 }
 
+:host + span {
+  height: 100%;
+}
+
 .question-mark {
   cursor: help;
-  fill: #999999;
+  fill: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  vertical-align:baseline;
 }
 
 .tooltip {

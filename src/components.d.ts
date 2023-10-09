@@ -6,10 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { NodeObject } from "jsonld";
+import { JsonLdId } from "./utils/types";
 import { SelectEvent } from "./utils/events";
 export { NodeObject } from "jsonld";
+export { JsonLdId } from "./utils/types";
 export { SelectEvent } from "./utils/events";
 export namespace Components {
+    /**
+     * This class represents the dialogue that is shown when the user wants to add a new node.
+     * It aims to replace the functionality of the inclde-view-edit component in the long term.
+     * The functionality of the inclde-view-edit component is currently:
+     * - (ATTRIBUTE) Add a new attribute (main purpose)
+     * - (RELATION) relate it to the selected node
+     * - (NODE) Add a new node to the data, if a unused ID is entered (but only with a relation to an existing node)
+     * - (ARRAY_ELEMENT) Add a element to an array attribute of the selected node, if subElement property is set
+     * The functionality of the inclde-add-node-dialogue component is currently:
+     * - (NODE) Add a new node to the data (main purpose)
+     * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
+     */
+    interface IncldeAddNodeDialogue {
+        /**
+          * Setting to determine if it is allowed to add primitives to the data.
+         */
+        "allowPrimitives": boolean;
+        /**
+          * The data to which the new node should be added.
+         */
+        "data": NodeObject[];
+        /**
+          * The node to which the new node should be connected to, if desired. Setting this property will add a relation field to the dialogue.
+         */
+        "relationTo"?: JsonLdId;
+    }
     interface IncldeEditor {
         "config": object | string;
         "data": object | string;
@@ -52,6 +80,10 @@ export namespace Components {
         "selector"?: number;
     }
 }
+export interface IncldeAddNodeDialogueCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLIncldeAddNodeDialogueElement;
+}
 export interface IncldeEditorCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLIncldeEditorElement;
@@ -77,6 +109,24 @@ export interface IncldeViewLinkCustomEvent<T> extends CustomEvent<T> {
     target: HTMLIncldeViewLinkElement;
 }
 declare global {
+    /**
+     * This class represents the dialogue that is shown when the user wants to add a new node.
+     * It aims to replace the functionality of the inclde-view-edit component in the long term.
+     * The functionality of the inclde-view-edit component is currently:
+     * - (ATTRIBUTE) Add a new attribute (main purpose)
+     * - (RELATION) relate it to the selected node
+     * - (NODE) Add a new node to the data, if a unused ID is entered (but only with a relation to an existing node)
+     * - (ARRAY_ELEMENT) Add a element to an array attribute of the selected node, if subElement property is set
+     * The functionality of the inclde-add-node-dialogue component is currently:
+     * - (NODE) Add a new node to the data (main purpose)
+     * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
+     */
+    interface HTMLIncldeAddNodeDialogueElement extends Components.IncldeAddNodeDialogue, HTMLStencilElement {
+    }
+    var HTMLIncldeAddNodeDialogueElement: {
+        prototype: HTMLIncldeAddNodeDialogueElement;
+        new (): HTMLIncldeAddNodeDialogueElement;
+    };
     interface HTMLIncldeEditorElement extends Components.IncldeEditor, HTMLStencilElement {
     }
     var HTMLIncldeEditorElement: {
@@ -129,6 +179,7 @@ declare global {
         new (): HTMLIncldeViewLinkElement;
     };
     interface HTMLElementTagNameMap {
+        "inclde-add-node-dialogue": HTMLIncldeAddNodeDialogueElement;
         "inclde-editor": HTMLIncldeEditorElement;
         "inclde-help-spot": HTMLIncldeHelpSpotElement;
         "inclde-input": HTMLIncldeInputElement;
@@ -140,6 +191,36 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    /**
+     * This class represents the dialogue that is shown when the user wants to add a new node.
+     * It aims to replace the functionality of the inclde-view-edit component in the long term.
+     * The functionality of the inclde-view-edit component is currently:
+     * - (ATTRIBUTE) Add a new attribute (main purpose)
+     * - (RELATION) relate it to the selected node
+     * - (NODE) Add a new node to the data, if a unused ID is entered (but only with a relation to an existing node)
+     * - (ARRAY_ELEMENT) Add a element to an array attribute of the selected node, if subElement property is set
+     * The functionality of the inclde-add-node-dialogue component is currently:
+     * - (NODE) Add a new node to the data (main purpose)
+     * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
+     */
+    interface IncldeAddNodeDialogue {
+        /**
+          * Setting to determine if it is allowed to add primitives to the data.
+         */
+        "allowPrimitives"?: boolean;
+        /**
+          * The data to which the new node should be added.
+         */
+        "data": NodeObject[];
+        /**
+          * Event that is fired when the new node is added.
+         */
+        "onNodeAdded"?: (event: IncldeAddNodeDialogueCustomEvent<CustomEvent>) => void;
+        /**
+          * The node to which the new node should be connected to, if desired. Setting this property will add a relation field to the dialogue.
+         */
+        "relationTo"?: JsonLdId;
+    }
     interface IncldeEditor {
         "config": object | string;
         "data": object | string;
@@ -195,6 +276,7 @@ declare namespace LocalJSX {
         "selector"?: number;
     }
     interface IntrinsicElements {
+        "inclde-add-node-dialogue": IncldeAddNodeDialogue;
         "inclde-editor": IncldeEditor;
         "inclde-help-spot": IncldeHelpSpot;
         "inclde-input": IncldeInput;
@@ -209,6 +291,19 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            /**
+             * This class represents the dialogue that is shown when the user wants to add a new node.
+             * It aims to replace the functionality of the inclde-view-edit component in the long term.
+             * The functionality of the inclde-view-edit component is currently:
+             * - (ATTRIBUTE) Add a new attribute (main purpose)
+             * - (RELATION) relate it to the selected node
+             * - (NODE) Add a new node to the data, if a unused ID is entered (but only with a relation to an existing node)
+             * - (ARRAY_ELEMENT) Add a element to an array attribute of the selected node, if subElement property is set
+             * The functionality of the inclde-add-node-dialogue component is currently:
+             * - (NODE) Add a new node to the data (main purpose)
+             * - (RELATION) Add a relation to an existing node, if such a node is given to the component (only supports https://schema.org/ relations)
+             */
+            "inclde-add-node-dialogue": LocalJSX.IncldeAddNodeDialogue & JSXBase.HTMLAttributes<HTMLIncldeAddNodeDialogueElement>;
             "inclde-editor": LocalJSX.IncldeEditor & JSXBase.HTMLAttributes<HTMLIncldeEditorElement>;
             "inclde-help-spot": LocalJSX.IncldeHelpSpot & JSXBase.HTMLAttributes<HTMLIncldeHelpSpotElement>;
             "inclde-input": LocalJSX.IncldeInput & JSXBase.HTMLAttributes<HTMLIncldeInputElement>;
