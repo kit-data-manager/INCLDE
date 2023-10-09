@@ -90,7 +90,7 @@ export class IncldeEditor {
       let errorHandler: (errorReason: any) => void = errorReason => {
         console.warn("Unable to compact JSON. Returning flattened JSON-LD. Reason: ", errorReason);
         this.editorClosed.emit(data);
-        this.render = () => undefined;
+        //this.render = () => undefined;
         this.selectedIndex = undefined;
         forceUpdate(this);
       };
@@ -100,7 +100,7 @@ export class IncldeEditor {
       )
       .then(result => {
         this.editorClosed.emit(result)
-        this.render = () => undefined;
+        //this.render = () => undefined;
         this.selectedIndex = undefined;
         forceUpdate(this);
         },
