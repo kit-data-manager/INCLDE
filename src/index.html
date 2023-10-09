@@ -114,6 +114,17 @@
       ]
     }
 
+    function downloadStringAsFile(data, filename, mimeType) {
+      const blob = new Blob([data], { type: mimeType });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+    }
+
     fetch("samples/bandcamp.jsonld")
       .then((response) => response.json())
       .then((data) => {
@@ -126,6 +137,8 @@
         document.getElementById("output").textContent = result
         editor.addEventListener('editorClosed', event => {
           console.log('event', event.detail);
+          const result = JSON.stringify(event.detail, null, 2);
+          downloadStringAsFile(result, "output.jsonld", "application/ld+json");
         })
         editor.addEventListener('dataUpdated', event => {
           console.log('event', event.detail);
